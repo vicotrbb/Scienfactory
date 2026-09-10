@@ -1,0 +1,22 @@
+[
+  {
+    "name": "engineering-results.json",
+    "sha256": "ae49b2386d6794e46944079334e34156b99c3b4f4a33132bbf09a89f7dda8881"
+  },
+  {
+    "name": "structure.json",
+    "sha256": "58af74128aebb8ac399a513417f95e84bc1e560e0fef2b03d1a3176bf45991bb"
+  },
+  {
+    "name": "independent-verification.json",
+    "sha256": "413d9a51b578a593bde381aeeab82c940b70ef8fd2145aa697f8c300ca1ded8f"
+  },
+  {
+    "name": "validation-review.md",
+    "sha256": "5f9942ad68938bb572a40ffb72013c9c3b21a8666bfae7a9743dbcfff48a1be6"
+  },
+  {
+    "name": "truss.glb",
+    "sha256": "23a1f9d5a21fa68674d2adadf499583cfe68fb53fb9c449f728bdbd7d5acc237"
+  }
+]

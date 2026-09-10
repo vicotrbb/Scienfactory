@@ -1,0 +1,52 @@
+{
+  "status": "checks_passed",
+  "scientificValidity": "requires_independent_review",
+  "scope": "Mechanical formatting and evidence linkage only. Neither claim completeness nor scientific entailment is automatically certified.",
+  "sourceArtifactId": "01f33d29-dca3-42ba-a1d5-eaa504f7b91d",
+  "sourceHash": "73508aac72f5934e9e9933431c79fd8df75832e46cb89c8140207523e0b909fd",
+  "compileManifestId": "ee2b8af8-d868-4cd9-bd5e-e5d9bd5981b5",
+  "references": [
+    {
+      "key": "purdue",
+      "sourceId": "9b84706c-7329-48f4-a97b-a0d46b43b723"
+    },
+    {
+      "key": "numpy",
+      "sourceId": "fcd983d6-5443-441f-94bb-927be4fc38fe"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "The three corrected 100 N cases reproduce saved deflections and satisfy equilibrium and energy tests.",
+      "location": "Results, Table I",
+      "kind": "computed",
+      "evidenceIds": [
+        "9cd9682a-1020-4c4f-a8d3-9ac3adc36f27",
+        "df0626d8-4548-4c36-8c04-6ebd7e006f5e"
+      ],
+      "limitations": "A small finite linear axial-bar model; no physical or structural safety certification."
+    },
+    {
+      "claim": "Increasing depth reduces calculated deflection and increases ideal member volume for these three configurations.",
+      "location": "Results, Figure 1",
+      "kind": "computed",
+      "evidenceIds": [
+        "9cd9682a-1020-4c4f-a8d3-9ac3adc36f27",
+        "e83caa33-60a6-44c6-ac85-8b2d8f49f541"
+      ],
+      "limitations": "No general power law, optimum, or comparison across topologies is claimed."
+    },
+    {
+      "claim": "The calculation follows the established direct stiffness method.",
+      "location": "Introduction and Methods",
+      "kind": "literature",
+      "evidenceIds": [
+        "9b84706c-7329-48f4-a97b-a0d46b43b723"
+      ],
+      "limitations": "The cited method does not independently validate this model or its implementation."
+    }
+  ],
+  "issues": [],
+  "assessedBy": "validation-editor",
+  "assessedAt": 1788991175144
+}

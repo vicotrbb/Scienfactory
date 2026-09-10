@@ -1,0 +1,15 @@
+{
+  "sourceArtifactId": "01f33d29-dca3-42ba-a1d5-eaa504f7b91d",
+  "sourceHash": "73508aac72f5934e9e9933431c79fd8df75832e46cb89c8140207523e0b909fd",
+  "inputArtifactIds": [
+    "451ab4f6-fb32-4963-8b42-6bf645eb56dd",
+    "d28efb51-7e90-4377-b5af-1d66cf80aa3e"
+  ],
+  "executionRecordId": "140ee4cf-9d50-48c8-82fc-c5db3bed1c4f",
+  "pdfArtifactId": "e9d57555-788c-45f6-ac62-61b3524fc9b7",
+  "reportArtifactId": "d0d0e855-4ae3-4c73-94a9-2b36fd77b909",
+  "pageArtifactIds": [
+    "fb298a62-1e9d-49fb-97de-967742fa2d30",
+    "fbb71bb4-0eff-4d37-afa4-1347a90455f8"
+  ]
+}

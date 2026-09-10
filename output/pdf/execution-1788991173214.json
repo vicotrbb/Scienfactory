@@ -1,0 +1,39 @@
+{
+  "language": "python",
+  "source": "870e1869-0d41-4918-bafb-facf52b39cc4",
+  "exitCode": 0,
+  "stdout": "{\n  \"verifiedCases\": 3,\n  \"results\": [\n    {\n      \"depth\": 0.04,\n      \"tipDeflection\": 0.008779041216924018,\n      \"volume\": 0.0023092387390712143,\n      \"relativeResidual\": 4.241837841856975e-11,\n      \"forceBalance\": 4.480993827597933e-11,\n      \"strainEnergy\": 0.4389520608374576,\n      \"forceDotDisplacement\": 0.8779041216924017,\n      \"energyRelativeError\": 1.9918539299768132e-11,\n      \"maxAxialStrain\": 0.00011265161178678516,\n      \"conditionNumber\": 582572.2054411549,\n      \"smallestEigenvalue\": 1822.0010027970077\n    },\n    {\n      \"depth\": 0.12,\n      \"tipDeflection\": 0.0009837536249446895,\n      \"volume\": 0.0024473561103682093,\n      \"relativeResidual\": 1.343632495699689e-12,\n      \"forceBalance\": 1.3431456373686286e-12,\n      \"strainEnergy\": 0.049187681247248094,\n      \"forceDotDisplacement\": 0.09837536249446895,\n      \"energyRelativeError\": 2.769199195405398e-13,\n      \"maxAxialStrain\": 3.7652083750690226e-05,\n      \"conditionNumber\": 27297.30690195838,\n      \"smallestEigenvalue\": 16059.061321159528\n    },\n    {\n      \"depth\": 0.36,\n      \"tipDeflection\": 0.00011988667871472335,\n      \"volume\": 0.0031011433266683653,\n      \"relativeResidual\": 1.8249286120117626e-13,\n      \"forceBalance\": 1.7030261462448838e-13,\n      \"strainEnergy\": 0.00599433393573591,\n      \"forceDotDisplacement\": 0.011988667871472337,\n      \"energyRelativeError\": 4.311968613887389e-14,\n      \"maxAxialStrain\": 1.2779577189741652e-05,\n      \"conditionNumber\": 8295.65219876435,\n      \"smallestEigenvalue\": 33565.16742604306\n    }\n  ]\n}\n",
+  "durationMs": 1142,
+  "artifacts": [
+    {
+      "id": "d28efb51-7e90-4377-b5af-1d66cf80aa3e",
+      "researchId": "0ed09bd3-9f00-41c7-a31d-23a5f78735fd",
+      "name": "depth-tradeoff.pdf",
+      "mime": "application/pdf",
+      "size": 8979,
+      "sha256": "3b6db67d56e794755c85ba96bc93de8553e9046677e5ee0f5045054ffff5af2a",
+      "createdAt": 1788991173213,
+      "provenance": "Execution 870e1869-0d41-4918-bafb-facf52b39cc4; exit 0; python"
+    },
+    {
+      "id": "88c9c21a-87ad-4bbd-a1a5-b78667f90a90",
+      "researchId": "0ed09bd3-9f00-41c7-a31d-23a5f78735fd",
+      "name": "depth-tradeoff.png",
+      "mime": "image/png",
+      "size": 47019,
+      "sha256": "14ff3735670e9d122482e55f22ceb1522463ff4640e07e030bde437baddd3658",
+      "createdAt": 1788991173214,
+      "provenance": "Execution 870e1869-0d41-4918-bafb-facf52b39cc4; exit 0; python"
+    },
+    {
+      "id": "df0626d8-4548-4c36-8c04-6ebd7e006f5e",
+      "researchId": "0ed09bd3-9f00-41c7-a31d-23a5f78735fd",
+      "name": "verification.json",
+      "mime": "application/json",
+      "size": 1669,
+      "sha256": "81eb908d47223ba9e13b14c4f74d1d52200344b1e2662dda9d6d83315d1c308c",
+      "createdAt": 1788991173214,
+      "provenance": "Execution 870e1869-0d41-4918-bafb-facf52b39cc4; exit 0; python"
+    }
+  ]
+}

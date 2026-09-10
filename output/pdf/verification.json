@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "depth": 0.04,
+      "tipDeflection": 0.008779041216924018,
+      "volume": 0.0023092387390712143,
+      "relativeResidual": 4.241837841856975e-11,
+      "forceBalance": 4.480993827597933e-11,
+      "strainEnergy": 0.4389520608374576,
+      "forceDotDisplacement": 0.8779041216924017,
+      "energyRelativeError": 1.9918539299768132e-11,
+      "maxAxialStrain": 0.00011265161178678516,
+      "conditionNumber": 582572.2054411549,
+      "smallestEigenvalue": 1822.0010027970077
+    },
+    {
+      "depth": 0.12,
+      "tipDeflection": 0.0009837536249446895,
+      "volume": 0.0024473561103682093,
+      "relativeResidual": 1.343632495699689e-12,
+      "forceBalance": 1.3431456373686286e-12,
+      "strainEnergy": 0.049187681247248094,
+      "forceDotDisplacement": 0.09837536249446895,
+      "energyRelativeError": 2.769199195405398e-13,
+      "maxAxialStrain": 3.7652083750690226e-05,
+      "conditionNumber": 27297.30690195838,
+      "smallestEigenvalue": 16059.061321159528
+    },
+    {
+      "depth": 0.36,
+      "tipDeflection": 0.00011988667871472335,
+      "volume": 0.0031011433266683653,
+      "relativeResidual": 1.8249286120117626e-13,
+      "forceBalance": 1.7030261462448838e-13,
+      "strainEnergy": 0.00599433393573591,
+      "forceDotDisplacement": 0.011988667871472337,
+      "energyRelativeError": 4.311968613887389e-14,
+      "maxAxialStrain": 1.2779577189741652e-05,
+      "conditionNumber": 8295.65219876435,
+      "smallestEigenvalue": 33565.16742604306
+    }
+  ],
+  "numpy": "2.2.6",
+  "python": "3.13.15",
+  "scope": "Independent matrix assembly and member-force/energy reconstruction. Linear axial-bar model only."
+}

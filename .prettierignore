@@ -1,0 +1,11 @@
+node_modules
+dist
+.data
+.env*
+bun.lock
+test-results
+playwright-report
+docs/screenshots
+
+tmp
+output
