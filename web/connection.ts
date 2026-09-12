@@ -1,3 +1,4 @@
+import { requestId as createRequestId } from './browser';
 import { useEffect, useRef, useState } from 'react';
 import type { Bootstrap, CommandInput, ServerEvent, Snapshot } from '../shared/protocol';
 import { applySnapshotPatch } from '../shared/state';
@@ -31,7 +32,7 @@ export function useConnection() {
         reject(new Error('Connection is offline. Please wait for reconnection.'));
         return;
       }
-      const requestId = crypto.randomUUID();
+      const requestId = createRequestId();
       const timer = setTimeout(() => {
         pending.current.delete(requestId);
         reject(

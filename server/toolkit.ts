@@ -1,4 +1,6 @@
 import { z } from 'zod';
+import { comparisonSchema, compareStudy } from './experiments/compare';
+import { lineageSchema, traceArtifact } from './experiments/lineage';
 import { executionSchema, executeExperiment } from './experiments/execution';
 import { studySchema, runStudy } from './experiments/study';
 import { reproduceSchema, reproduceExecution } from './experiments/reproduce';
@@ -20,6 +22,8 @@ import { present, presentationSchema, updatePlan, planSchema } from './canvas';
 import { instruments } from '../shared/instruments';
 
 const schemas = {
+  compare_study: comparisonSchema,
+  trace_artifact: lineageSchema,
   run_study: studySchema,
   reproduce_execution: reproduceSchema,
   research_guide: z.object({
@@ -70,6 +74,10 @@ const schemas = {
   }),
 };
 const descriptions: Record<keyof typeof schemas, string> = {
+  compare_study:
+    'Compare two cases of an actual run_study result for one declared metric. Pair every repeat by seed; include failed checks with valid measurements and refuse missing pairs. Choose deterministic (descriptive only) or randomized_repeats (exploratory BCa interval for mean paired difference, at least six nondegenerate repeats). Explain the independence and pairing assumptions in rationale. Automatically verifies recorded metrics and produces a table, plot and execution evidence. Difference is comparison minus baseline. No p-values, causal claims or multiple-comparison correction.',
+  trace_artifact:
+    'Trace an output through actual generating execution records, source hashes and immutable input versions. Checks content integrity and displays a lineage diagram. Authored/imported leaves and depth/node limits are explicit. Use before citing computed evidence; replaying an inspection does not rerun the computation it inspected.',
   run_study:
     'Run a declared Python parameter study with up to 48 total trials, repeat seeds, finite metrics and optional min/max checks. Include a rationale explaining why each criterion is meaningful; wide bounds merely checking finite values do not establish accuracy. code receives parameters (dict), seed (int), rng (NumPy Generator), np and random; assign metrics = {name: number}. Save extra outputs in artifacts/. Declare requiredOutputs as exact nonempty filenames expected from EVERY trial, for example ["trajectory.csv"]. Missing outputs fail the trial even if metrics pass. Per-trial IDs distinguish files with the same name. Each trial uses a fresh isolated container, records exact inputs and image, and streams to the canvas. The protocol is saved before computation, then results/CSV/charts update automatically. Two trials scheduled at a time; existing worker concurrency applies. Missing, failed and cancelled runs stay visible. Seeds are paired across parameter cases. This does not establish scientific validity or provide inferential confidence intervals.',
   reproduce_execution:
@@ -133,6 +141,10 @@ export async function executeTool(name: string, args: unknown, ctx: ToolContext)
   ctx.signal.throwIfAborted();
   const { store, researchId, signal } = ctx;
   switch (name) {
+    case 'compare_study':
+      return compareStudy(args, ctx);
+    case 'trace_artifact':
+      return traceArtifact(args, ctx);
     case 'run_study':
       return runStudy(args, ctx);
     case 'reproduce_execution':

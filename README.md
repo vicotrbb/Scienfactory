@@ -31,6 +31,18 @@ bun start
 
 Open **http://127.0.0.1:4310**.
 
+## Access from your LAN
+
+```sh
+bun run lan
+# Select a specific interface if necessary:
+LAN_ADDRESS=192.168.50.113 bun run lan
+```
+
+This builds the frontend and serves the app plus WebSockets on the selected private IP at port 4310. The launcher prints the address. Stop an existing server on that port before starting it. The current local installation is available at **http://192.168.50.113:4310**; its address can change with DHCP.
+
+LAN mode shares the existing workspace and provider-backed capabilities with devices that can reach that address. It is intended for your trusted network. It does not add separate user accounts or public-hosting authentication. Host and Origin checks still require explicitly configured addresses, and session cookies remain HttpOnly and SameSite=Strict.
+
 ## Run the whole application in containers
 
 ```sh
@@ -93,6 +105,8 @@ This image downloads the Mathlib v4.24.0 project and its compiled cache at build
 ## Parameter studies and reproducibility
 
 The agent can run parameter grids, repeated simulations, convergence checks and ablations with `run_study`. It saves the protocol before execution, records paired seeds, runs up to 48 isolated trials, retains failed cases, and automatically updates the existing canvas with criteria, outcomes, CSV data and charts. Declare `requiredOutputs` for essential raw data so missing or empty files fail visibly. Each metric can include a scientific rationale and numerical bounds.
+
+`compare_study` compares two cases using every paired repeat, with descriptive summaries or exploratory bootstrap intervals under explicit sampling assumptions. Missing pairs are refused, failed bounds stay included, and deterministic, tiny or constant-difference samples do not receive misleading intervals. The 48-trial total budget now permits up to 24 repeats for a two-case comparison. `trace_artifact` draws recorded source/input lineage with integrity checks and explicit unknown leaves or depth limits.
 
 `reproduce_execution` reruns the original source and exact input versions under the recorded Docker image, then compares full console output and artifact hashes. It refuses legacy records without sufficient provenance and unavailable images. Exact replay checks repeatability; independent implementations and scientific review establish different evidence. `research_guide` supplies methods and pitfalls for numerical analysis, statistics, combinatorics, learning, dynamics and optimization.
 

@@ -1,3 +1,4 @@
+import { copyText } from './browser';
 import { Copy, Check, LoaderCircle, Wrench, AlertCircle, Users, Paperclip } from 'lucide-react';
 import type { Message, Snapshot, ToolInvocation } from '../shared/protocol';
 import { Brand, IconButton } from './ui';
@@ -135,8 +136,7 @@ export function ChatTimeline({
                 <IconButton
                   label="Copy response"
                   onClick={() =>
-                    void navigator.clipboard
-                      .writeText(m.text)
+                    void copyText(m.text)
                       .then(() => notify('Response copied'))
                       .catch(() => notify('Clipboard is unavailable.'))
                   }

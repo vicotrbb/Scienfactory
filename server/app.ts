@@ -1,4 +1,5 @@
 import { Elysia } from 'elysia';
+import { accessPolicy } from './network';
 import { staticPlugin } from '@elysiajs/static';
 import {
   Command,
@@ -20,6 +21,7 @@ import { snapshotPatch } from '../shared/state';
 
 export interface AppOptions {
   root: string;
+  publicOrigin?: string;
   port?: number;
   lab?: Lab;
   provider?: ProviderFactory;
@@ -28,6 +30,12 @@ export interface AppOptions {
   models?: Pick<ModelDirectory, 'list' | 'clear'>;
 }
 export function createApp(options: AppOptions) {
+  const publicOrigin = options.publicOrigin ?? process.env.PUBLIC_ORIGIN;
+  const { origins: allowedOrigins, validHost } = accessPolicy(
+    options.port ?? 4310,
+    !!options.production,
+    publicOrigin,
+  );
   const store = new Store(options.root);
   const lab = options.lab ?? new DockerLab();
   const models = options.models ?? new ModelDirectory();
@@ -41,7 +49,7 @@ export function createApp(options: AppOptions) {
     limits: defaultLimits,
   };
   const session = crypto.randomUUID() + crypto.randomUUID();
-  const cookieName = `scienfactory_session_${process.env.PUBLIC_ORIGIN ? new URL(process.env.PUBLIC_ORIGIN).port : (options.port ?? 4310)}`;
+  const cookieName = `scienfactory_session_${publicOrigin ? new URL(publicOrigin).port : (options.port ?? 4310)}`;
   const clients = new Map<string, { send: (data: ServerEvent) => unknown; researchId?: string }>();
   const timers = new Map<string, ReturnType<typeof setTimeout>>();
   const lastSnapshots = new Map<string, Snapshot>();
@@ -100,21 +108,6 @@ export function createApp(options: AppOptions) {
   function busy(id: string) {
     return engine.busy(id) || manual.has(id);
   }
-  const allowedOrigins = new Set([
-    `http://127.0.0.1:${options.port ?? 4310}`,
-    `http://localhost:${options.port ?? 4310}`,
-    ...(options.production ? [] : ['http://127.0.0.1:5173', 'http://localhost:5173']),
-  ]);
-  if (process.env.PUBLIC_ORIGIN) {
-    const origin = new URL(process.env.PUBLIC_ORIGIN);
-    if (!['127.0.0.1', 'localhost'].includes(origin.hostname))
-      throw new Error('This release only supports a loopback public origin.');
-    allowedOrigins.add(origin.origin);
-  }
-  const validHost = (request: Request) => {
-    const host = request.headers.get('host')?.split(':')[0];
-    return host === 'localhost' || host === '127.0.0.1';
-  };
   const authenticated = (request: Request) =>
     request.headers
       .get('cookie')

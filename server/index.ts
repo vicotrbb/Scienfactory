@@ -8,7 +8,9 @@ const runtime = createApp({
   production: process.env.NODE_ENV === 'production',
 });
 runtime.app.listen({ port, hostname: process.env.BIND_ADDRESS ?? '127.0.0.1' });
-console.log(`Scienfactory is listening at http://127.0.0.1:${port}`);
+console.log(
+  `Scienfactory is listening at ${process.env.PUBLIC_ORIGIN ?? `http://${process.env.BIND_ADDRESS ?? '127.0.0.1'}:${port}`}`,
+);
 let stopping = false;
 const shutdown = async () => {
   if (stopping) return;

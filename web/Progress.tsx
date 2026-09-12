@@ -3,6 +3,8 @@ import { Check, Circle, LoaderCircle, Pause, ChevronDown } from 'lucide-react';
 import type { Snapshot, Agent } from '../shared/protocol';
 
 export const toolLabels: Record<string, string> = {
+  compare_study: 'Comparing paired outcomes',
+  trace_artifact: 'Tracing evidence',
   run_study: 'Running a parameter study',
   reproduce_execution: 'Reproducing an experiment',
   research_guide: 'Designing the investigation',

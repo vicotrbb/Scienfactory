@@ -1,0 +1,756 @@
+{
+  "root": ".data/comparison-validation",
+  "researchId": "d339cff0-05f7-41a9-888e-321d9337ac16",
+  "summaries": [
+    {
+      "title": "Signal processing · noisy waveform recovery",
+      "trials": 16,
+      "metric": "rmse",
+      "unit": "amplitude",
+      "pairs": 8,
+      "direction": "comparison minus baseline",
+      "meanDifference": -0.08477825089546343,
+      "sampleSD": 0.006155190243506519,
+      "confidence": 0.95,
+      "interval": [
+        -0.08816295356442888,
+        -0.0800035764925641
+      ],
+      "method": "BCa paired-difference bootstrap",
+      "failedChecksIncluded": 0,
+      "warnings": [
+        "Exploratory, single-contrast analysis chosen after the study. No multiple-comparison adjustment. Repeated computations are not independent physical observations.",
+        "Small-sample bootstrap interval is exploratory and assumes independent repeat seeds with valid pairing; coverage is not guaranteed."
+      ],
+      "observations": [
+        {
+          "repeat": 1,
+          "seed": 9271,
+          "baseline": {
+            "case": 1,
+            "repeat": 1,
+            "seed": 9271,
+            "value": 0.19895515345577816,
+            "status": "passed",
+            "executionRecordId": "27a7a1a5-d01b-4f22-b3e5-8b08fa137456"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 1,
+            "seed": 9271,
+            "value": 0.11546163880940598,
+            "status": "passed",
+            "executionRecordId": "934234a0-bebe-460e-8dd1-e8bde1a2f527"
+          }
+        },
+        {
+          "repeat": 2,
+          "seed": 9272,
+          "baseline": {
+            "case": 1,
+            "repeat": 2,
+            "seed": 9272,
+            "value": 0.20471876287695237,
+            "status": "passed",
+            "executionRecordId": "8f453bcf-685e-4cbf-9410-fa1e3f6afbf1"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 2,
+            "seed": 9272,
+            "value": 0.11678344397315053,
+            "status": "passed",
+            "executionRecordId": "59e0a7a1-0d6c-400c-aba9-d755c260bd70"
+          }
+        },
+        {
+          "repeat": 3,
+          "seed": 9273,
+          "baseline": {
+            "case": 1,
+            "repeat": 3,
+            "seed": 9273,
+            "value": 0.1923736953228189,
+            "status": "passed",
+            "executionRecordId": "255cf2a0-99ec-4284-a81d-2ba071667c07"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 3,
+            "seed": 9273,
+            "value": 0.11946394690161036,
+            "status": "passed",
+            "executionRecordId": "59435f46-3ae9-4603-9552-a39037e39069"
+          }
+        },
+        {
+          "repeat": 4,
+          "seed": 9274,
+          "baseline": {
+            "case": 1,
+            "repeat": 4,
+            "seed": 9274,
+            "value": 0.19052557858245234,
+            "status": "passed",
+            "executionRecordId": "2a008f1c-4892-4ac9-93ea-1c8a52d3dd74"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 4,
+            "seed": 9274,
+            "value": 0.09778132285244079,
+            "status": "passed",
+            "executionRecordId": "b314c4c3-66e7-4e04-b7d6-436c6c0a9a63"
+          }
+        },
+        {
+          "repeat": 5,
+          "seed": 9275,
+          "baseline": {
+            "case": 1,
+            "repeat": 5,
+            "seed": 9275,
+            "value": 0.19271030983656318,
+            "status": "passed",
+            "executionRecordId": "f4e83c08-96d4-455f-8e0e-bf921360563e"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 5,
+            "seed": 9275,
+            "value": 0.10723319859167854,
+            "status": "passed",
+            "executionRecordId": "1be3e750-ab8d-47a8-b149-ebb0346344f9"
+          }
+        },
+        {
+          "repeat": 6,
+          "seed": 9276,
+          "baseline": {
+            "case": 1,
+            "repeat": 6,
+            "seed": 9276,
+            "value": 0.1966597508590478,
+            "status": "passed",
+            "executionRecordId": "464cec34-c3fb-4db8-adce-75c63edc17cc"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 6,
+            "seed": 9276,
+            "value": 0.10600539043704009,
+            "status": "passed",
+            "executionRecordId": "762faad8-ac6f-4cd9-bf3a-f1bdc2b918f4"
+          }
+        },
+        {
+          "repeat": 7,
+          "seed": 9277,
+          "baseline": {
+            "case": 1,
+            "repeat": 7,
+            "seed": 9277,
+            "value": 0.2012211390937967,
+            "status": "passed",
+            "executionRecordId": "05d0a4ac-6b16-44d2-bfb9-2c8137272d2e"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 7,
+            "seed": 9277,
+            "value": 0.1201159450888316,
+            "status": "passed",
+            "executionRecordId": "edc521c8-3c4a-404f-a312-35d7a584ed86"
+          }
+        },
+        {
+          "repeat": 8,
+          "seed": 9278,
+          "baseline": {
+            "case": 1,
+            "repeat": 8,
+            "seed": 9278,
+            "value": 0.20007263498532382,
+            "status": "passed",
+            "executionRecordId": "018bc42a-15f9-44d8-81c7-05246068f867"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 8,
+            "seed": 9278,
+            "value": 0.11616613119486788,
+            "status": "passed",
+            "executionRecordId": "be0b5047-9352-4a96-86bb-83de7e35beb2"
+          }
+        }
+      ],
+      "executionRecordId": "e6699d39-ff1b-4332-b955-911f1f283779",
+      "reportArtifactId": "08cae6d4-5aee-4092-916a-e20d9c94b511",
+      "artifactId": "5c033669-2972-4aa5-ac14-0b246874ea5b",
+      "plotArtifactId": "a047016f-81a8-4f4f-955a-3a45015e90fb",
+      "lineageNodes": 4,
+      "replay": "matched"
+    },
+    {
+      "title": "Optimization · assignment versus greedy choice",
+      "trials": 16,
+      "metric": "cost",
+      "unit": "cost units",
+      "pairs": 8,
+      "direction": "comparison minus baseline",
+      "meanDifference": -80.5,
+      "sampleSD": 55.95406279133931,
+      "confidence": 0.95,
+      "interval": [
+        -118.62499999999999,
+        -44.125
+      ],
+      "method": "BCa paired-difference bootstrap",
+      "failedChecksIncluded": 0,
+      "warnings": [
+        "Exploratory, single-contrast analysis chosen after the study. No multiple-comparison adjustment. Repeated computations are not independent physical observations.",
+        "Small-sample bootstrap interval is exploratory and assumes independent repeat seeds with valid pairing; coverage is not guaranteed."
+      ],
+      "observations": [
+        {
+          "repeat": 1,
+          "seed": 9271,
+          "baseline": {
+            "case": 1,
+            "repeat": 1,
+            "seed": 9271,
+            "value": 213,
+            "status": "passed",
+            "executionRecordId": "11720ec4-5937-4bec-8c00-f5310b08b8e1"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 1,
+            "seed": 9271,
+            "value": 91,
+            "status": "passed",
+            "executionRecordId": "6012c25b-2499-4d99-9a9c-4df914e3f96f"
+          }
+        },
+        {
+          "repeat": 2,
+          "seed": 9272,
+          "baseline": {
+            "case": 1,
+            "repeat": 2,
+            "seed": 9272,
+            "value": 157,
+            "status": "passed",
+            "executionRecordId": "c98a7cb1-078a-43c5-afa1-e557c0445155"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 2,
+            "seed": 9272,
+            "value": 111,
+            "status": "passed",
+            "executionRecordId": "ae7b6ee7-895a-42fc-b7e9-633fd0c252ff"
+          }
+        },
+        {
+          "repeat": 3,
+          "seed": 9273,
+          "baseline": {
+            "case": 1,
+            "repeat": 3,
+            "seed": 9273,
+            "value": 163,
+            "status": "passed",
+            "executionRecordId": "df4e3454-8158-43e9-b2e1-00fa4deaf80f"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 3,
+            "seed": 9273,
+            "value": 136,
+            "status": "passed",
+            "executionRecordId": "250645d9-b9b5-4448-9ba7-f0132e904a9a"
+          }
+        },
+        {
+          "repeat": 4,
+          "seed": 9274,
+          "baseline": {
+            "case": 1,
+            "repeat": 4,
+            "seed": 9274,
+            "value": 146,
+            "status": "passed",
+            "executionRecordId": "cef89112-718f-4c0a-b60f-737acf7fa18c"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 4,
+            "seed": 9274,
+            "value": 127,
+            "status": "passed",
+            "executionRecordId": "7c7ed170-a981-4938-87fe-3a64d2dfeace"
+          }
+        },
+        {
+          "repeat": 5,
+          "seed": 9275,
+          "baseline": {
+            "case": 1,
+            "repeat": 5,
+            "seed": 9275,
+            "value": 124,
+            "status": "passed",
+            "executionRecordId": "f655fc56-81b8-475f-b06d-3bee5268e648"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 5,
+            "seed": 9275,
+            "value": 96,
+            "status": "passed",
+            "executionRecordId": "b4e4e5a7-3c46-4ed9-8987-fe3f763afbc1"
+          }
+        },
+        {
+          "repeat": 6,
+          "seed": 9276,
+          "baseline": {
+            "case": 1,
+            "repeat": 6,
+            "seed": 9276,
+            "value": 236,
+            "status": "passed",
+            "executionRecordId": "d7201619-f501-4bfb-85c3-134fb5252d60"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 6,
+            "seed": 9276,
+            "value": 114,
+            "status": "passed",
+            "executionRecordId": "137b3bff-5279-4387-a9d1-a5721c0dbd60"
+          }
+        },
+        {
+          "repeat": 7,
+          "seed": 9277,
+          "baseline": {
+            "case": 1,
+            "repeat": 7,
+            "seed": 9277,
+            "value": 222,
+            "status": "passed",
+            "executionRecordId": "086b7494-c3ff-4200-9696-1c2be68e8ce8"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 7,
+            "seed": 9277,
+            "value": 102,
+            "status": "passed",
+            "executionRecordId": "bd194993-7fa1-40b8-b9a9-c02d84c10d61"
+          }
+        },
+        {
+          "repeat": 8,
+          "seed": 9278,
+          "baseline": {
+            "case": 1,
+            "repeat": 8,
+            "seed": 9278,
+            "value": 297,
+            "status": "passed",
+            "executionRecordId": "39cbb2d3-0347-43c6-a7eb-d5f81c0d1dc0"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 8,
+            "seed": 9278,
+            "value": 137,
+            "status": "passed",
+            "executionRecordId": "f8984586-6166-4df1-beba-a417cebef193"
+          }
+        }
+      ],
+      "executionRecordId": "5b8e154a-134b-47e9-a9cb-928618eeb7af",
+      "reportArtifactId": "a9cef7c5-9af8-46a0-b761-0abf7b5f4149",
+      "artifactId": "bddddbfd-85c9-4c98-b333-5d3d4e573e42",
+      "plotArtifactId": "8786641b-15c7-497c-ab55-4f399ab1e532",
+      "lineageNodes": 4,
+      "replay": "matched"
+    },
+    {
+      "title": "Mechanics · long-time oscillator energy",
+      "trials": 16,
+      "metric": "energy_drift",
+      "unit": "dimensionless energy",
+      "pairs": 8,
+      "direction": "comparison minus baseline",
+      "meanDifference": -0.857200778280444,
+      "sampleSD": 0.00005246262404105388,
+      "confidence": 0.95,
+      "interval": [
+        -0.8572341975443674,
+        -0.8571666760856013
+      ],
+      "method": "BCa paired-difference bootstrap",
+      "failedChecksIncluded": 0,
+      "warnings": [
+        "Exploratory, single-contrast analysis chosen after the study. No multiple-comparison adjustment. Repeated computations are not independent physical observations.",
+        "Small-sample bootstrap interval is exploratory and assumes independent repeat seeds with valid pairing; coverage is not guaranteed."
+      ],
+      "observations": [
+        {
+          "repeat": 1,
+          "seed": 9271,
+          "baseline": {
+            "case": 1,
+            "repeat": 1,
+            "seed": 9271,
+            "value": 0.8574458721906417,
+            "status": "passed",
+            "executionRecordId": "e006669b-1997-47b1-b4c6-f5a86b429601"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 1,
+            "seed": 9271,
+            "value": 0.0003121226422510004,
+            "status": "passed",
+            "executionRecordId": "5a6832b2-5f89-4a4a-bb78-f159eac5e662"
+          }
+        },
+        {
+          "repeat": 2,
+          "seed": 9272,
+          "baseline": {
+            "case": 1,
+            "repeat": 2,
+            "seed": 9272,
+            "value": 0.8574458721906428,
+            "status": "passed",
+            "executionRecordId": "6a5ac820-2bba-4e42-b4ab-a3b35a8dce21"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 2,
+            "seed": 9272,
+            "value": 0.0003039875693558458,
+            "status": "passed",
+            "executionRecordId": "5d812e64-842b-4b88-a936-fc3024614759"
+          }
+        },
+        {
+          "repeat": 3,
+          "seed": 9273,
+          "baseline": {
+            "case": 1,
+            "repeat": 3,
+            "seed": 9273,
+            "value": 0.8574458721906386,
+            "status": "passed",
+            "executionRecordId": "948a7950-67d6-4242-8b45-185cdb44959e"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 3,
+            "seed": 9273,
+            "value": 0.00019178290447113833,
+            "status": "passed",
+            "executionRecordId": "e9c19e57-253b-4093-bfcd-f293b556f516"
+          }
+        },
+        {
+          "repeat": 4,
+          "seed": 9274,
+          "baseline": {
+            "case": 1,
+            "repeat": 4,
+            "seed": 9274,
+            "value": 0.8574458721906444,
+            "status": "passed",
+            "executionRecordId": "a071c363-7813-4b69-9b84-d35061ae12d5"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 4,
+            "seed": 9274,
+            "value": 0.00025207031620838594,
+            "status": "passed",
+            "executionRecordId": "b4bee894-f3c4-4886-9774-c885bf6deda3"
+          }
+        },
+        {
+          "repeat": 5,
+          "seed": 9275,
+          "baseline": {
+            "case": 1,
+            "repeat": 5,
+            "seed": 9275,
+            "value": 0.8574458721906426,
+            "status": "passed",
+            "executionRecordId": "4798588c-43c3-48bb-b547-ca137acfa4bc"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 5,
+            "seed": 9275,
+            "value": 0.0001767279445160641,
+            "status": "passed",
+            "executionRecordId": "646a3d96-5b78-41af-a134-62a451bf95c4"
+          }
+        },
+        {
+          "repeat": 6,
+          "seed": 9276,
+          "baseline": {
+            "case": 1,
+            "repeat": 6,
+            "seed": 9276,
+            "value": 0.857445872190643,
+            "status": "passed",
+            "executionRecordId": "91200b41-d26a-4b4a-965b-8ad411838238"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 6,
+            "seed": 9276,
+            "value": 0.00028220465731465527,
+            "status": "passed",
+            "executionRecordId": "930b2a9a-f731-487c-87ac-24a241956ede"
+          }
+        },
+        {
+          "repeat": 7,
+          "seed": 9277,
+          "baseline": {
+            "case": 1,
+            "repeat": 7,
+            "seed": 9277,
+            "value": 0.8574458721906442,
+            "status": "passed",
+            "executionRecordId": "dc2c5207-61e0-4f2c-999d-23b089227f70"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 7,
+            "seed": 9277,
+            "value": 0.00024537255418410897,
+            "status": "passed",
+            "executionRecordId": "3eaa1485-8ca9-456d-a1a8-e92424ff01b6"
+          }
+        },
+        {
+          "repeat": 8,
+          "seed": 9278,
+          "baseline": {
+            "case": 1,
+            "repeat": 8,
+            "seed": 9278,
+            "value": 0.8574458721906426,
+            "status": "passed",
+            "executionRecordId": "7e5470d1-0d9e-44e2-92b0-30523b7b3070"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 8,
+            "seed": 9278,
+            "value": 0.00019648269328664814,
+            "status": "passed",
+            "executionRecordId": "55cf709d-2778-4d79-a8a6-b4a0309ccf97"
+          }
+        }
+      ],
+      "executionRecordId": "0a453d2d-a8de-4721-9988-5024875467fe",
+      "reportArtifactId": "a09ca191-f1fa-4cdd-bd41-248dfbae6747",
+      "artifactId": "c8e69e8a-470c-4636-a609-472b82373e16",
+      "plotArtifactId": "0426c9be-b6ca-4302-9516-6f1f203cf34e",
+      "lineageNodes": 4,
+      "replay": "matched"
+    }
+  ],
+  "degenerate": {
+    "metric": "rmse",
+    "unit": "amplitude",
+    "pairs": 8,
+    "direction": "comparison minus baseline",
+    "meanDifference": 1,
+    "sampleSD": 0,
+    "confidence": 0.95,
+    "interval": null,
+    "method": "descriptive only",
+    "failedChecksIncluded": 8,
+    "warnings": [
+      "Exploratory, single-contrast analysis chosen after the study. No multiple-comparison adjustment. Repeated computations are not independent physical observations.",
+      "All observed paired differences are identical: uncertainty interval withheld; this does not imply zero uncertainty.",
+      "8 outcomes failed study checks and remain included to avoid success-only selection."
+    ],
+    "observations": [
+      {
+        "repeat": 1,
+        "seed": 9271,
+        "baseline": {
+          "case": 1,
+          "repeat": 1,
+          "seed": 9271,
+          "value": 1,
+          "status": "passed",
+          "executionRecordId": "fbc4bf33-486d-4ad6-9ce1-ac1b963431f8"
+        },
+        "comparison": {
+          "case": 2,
+          "repeat": 1,
+          "seed": 9271,
+          "value": 2,
+          "status": "failed",
+          "executionRecordId": "d3ec19f7-ae2c-4b11-9095-810621fbd655"
+        }
+      },
+      {
+        "repeat": 2,
+        "seed": 9272,
+        "baseline": {
+          "case": 1,
+          "repeat": 2,
+          "seed": 9272,
+          "value": 1,
+          "status": "passed",
+          "executionRecordId": "3ff0d998-f4de-4d1d-9861-dc2e16b48f65"
+        },
+        "comparison": {
+          "case": 2,
+          "repeat": 2,
+          "seed": 9272,
+          "value": 2,
+          "status": "failed",
+          "executionRecordId": "ff84c6fa-1a3c-4700-9c67-332ae49a8fba"
+        }
+      },
+      {
+        "repeat": 3,
+        "seed": 9273,
+        "baseline": {
+          "case": 1,
+          "repeat": 3,
+          "seed": 9273,
+          "value": 1,
+          "status": "passed",
+          "executionRecordId": "1954908b-c48f-43e5-97da-7566aa78324e"
+        },
+        "comparison": {
+          "case": 2,
+          "repeat": 3,
+          "seed": 9273,
+          "value": 2,
+          "status": "failed",
+          "executionRecordId": "ebf81ec2-64d0-4611-a13a-502a79bf934d"
+        }
+      },
+      {
+        "repeat": 4,
+        "seed": 9274,
+        "baseline": {
+          "case": 1,
+          "repeat": 4,
+          "seed": 9274,
+          "value": 1,
+          "status": "passed",
+          "executionRecordId": "a9461693-cc54-4c0b-876a-c245b40c9976"
+        },
+        "comparison": {
+          "case": 2,
+          "repeat": 4,
+          "seed": 9274,
+          "value": 2,
+          "status": "failed",
+          "executionRecordId": "3d73c790-0db3-4c6b-9fc5-7b6426ea8aaa"
+        }
+      },
+      {
+        "repeat": 5,
+        "seed": 9275,
+        "baseline": {
+          "case": 1,
+          "repeat": 5,
+          "seed": 9275,
+          "value": 1,
+          "status": "passed",
+          "executionRecordId": "9b908233-27e8-4361-a5d7-c10719b418fd"
+        },
+        "comparison": {
+          "case": 2,
+          "repeat": 5,
+          "seed": 9275,
+          "value": 2,
+          "status": "failed",
+          "executionRecordId": "10861a2a-9112-492a-98c6-5ae0e2b114ad"
+        }
+      },
+      {
+        "repeat": 6,
+        "seed": 9276,
+        "baseline": {
+          "case": 1,
+          "repeat": 6,
+          "seed": 9276,
+          "value": 1,
+          "status": "passed",
+          "executionRecordId": "66a88ef2-f642-4c89-ab44-4f1c3c3b9760"
+        },
+        "comparison": {
+          "case": 2,
+          "repeat": 6,
+          "seed": 9276,
+          "value": 2,
+          "status": "failed",
+          "executionRecordId": "a85739ed-36de-4f15-9d34-2beff7513c44"
+        }
+      },
+      {
+        "repeat": 7,
+        "seed": 9277,
+        "baseline": {
+          "case": 1,
+          "repeat": 7,
+          "seed": 9277,
+          "value": 1,
+          "status": "passed",
+          "executionRecordId": "0171084a-f108-4f2b-9788-b4ebb118d33f"
+        },
+        "comparison": {
+          "case": 2,
+          "repeat": 7,
+          "seed": 9277,
+          "value": 2,
+          "status": "failed",
+          "executionRecordId": "1b9057f6-b363-4ee7-81b1-2e1688dae305"
+        }
+      },
+      {
+        "repeat": 8,
+        "seed": 9278,
+        "baseline": {
+          "case": 1,
+          "repeat": 8,
+          "seed": 9278,
+          "value": 1,
+          "status": "passed",
+          "executionRecordId": "fd1ca8fa-e30e-440e-b732-6eb4786f58b2"
+        },
+        "comparison": {
+          "case": 2,
+          "repeat": 8,
+          "seed": 9278,
+          "value": 2,
+          "status": "failed",
+          "executionRecordId": "f399091c-7235-4308-a71f-bd8f91db5a2e"
+        }
+      }
+    ],
+    "executionRecordId": "ce6828ff-aa18-4531-a616-bd4cadb7f4dc",
+    "reportArtifactId": "7e312398-8317-4d4e-a168-8fa8d2dfc404",
+    "artifactId": "c60514d8-7083-4d10-978a-993260f8b84e",
+    "plotArtifactId": "5397f2a6-9e08-4f3d-96ff-e3d911e6b1a5"
+  }
+}

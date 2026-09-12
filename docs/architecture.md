@@ -31,7 +31,7 @@ Files are SHA-256-addressed blobs. Artifact metadata belongs to one research, an
 
 ## Security model
 
-- Single trusted local user. The server binds to loopback by default; Compose publishes only to loopback. Host and Origin validation reject cross-site and DNS-rebinding access. WebSocket upgrades require an HttpOnly, SameSite=Strict session cookie. Cookies are namespaced per installation port.
+- Single trusted workspace. The server binds to loopback by default; Compose publishes only to loopback. The explicit `bun run lan` launcher binds a selected private interface and permits its configured origin. LAN clients share the workspace and provider capabilities; there are no separate user accounts. Host and Origin validation reject cross-site and DNS-rebinding access. WebSocket upgrades require an HttpOnly, SameSite=Strict session cookie. Cookies are namespaced per installation port.
 - API credentials are sent only to fixed official provider endpoints. UI-supplied credentials live in server memory. Environment credentials are intentionally persistent outside application storage. Error messages redact keys. The UI never receives secret values.
 - The trusted application controller has Docker access. Generated programs never receive the Docker socket, host filesystem mounts, API keys, or a network interface with egress. Containers use a non-root user, dropped capabilities, no-new-privileges, resource limits, a read-only root, and bounded tmpfs mounts.
 - Containers share the Docker host kernel. This is not a hostile multi-tenant isolation claim. Public hosting would require authentication, tenant separation, a dedicated execution controller, stronger isolation, per-tenant quotas, TLS, audit policy, and an operational security review.

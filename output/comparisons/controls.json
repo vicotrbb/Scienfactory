@@ -1,0 +1,129 @@
+{
+  "shortAndDeterministic": [
+    {
+      "metric": "rmse",
+      "unit": "amplitude",
+      "pairs": 2,
+      "direction": "comparison minus baseline",
+      "meanDifference": 0.15104388651101758,
+      "sampleSD": 0.002254561564451518,
+      "confidence": 0.95,
+      "interval": null,
+      "method": "descriptive only",
+      "failedChecksIncluded": 0,
+      "warnings": [
+        "Exploratory, single-contrast analysis chosen after the study. No multiple-comparison adjustment. Repeated computations are not independent physical observations.",
+        "Fewer than six paired repeats: uncertainty interval withheld; more independent simulation seeds are needed."
+      ],
+      "observations": [
+        {
+          "repeat": 1,
+          "seed": 9271,
+          "baseline": {
+            "case": 1,
+            "repeat": 1,
+            "seed": 9271,
+            "value": 0,
+            "status": "passed",
+            "executionRecordId": "b40483b1-92a6-473d-b467-7cd047021cfc"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 1,
+            "seed": 9271,
+            "value": 0.14944967074019136,
+            "status": "passed",
+            "executionRecordId": "153c3dc0-5faf-4d62-9826-3e238fd8356b"
+          }
+        },
+        {
+          "repeat": 2,
+          "seed": 9272,
+          "baseline": {
+            "case": 1,
+            "repeat": 2,
+            "seed": 9272,
+            "value": 0,
+            "status": "passed",
+            "executionRecordId": "3d2d83b3-681c-4113-b6aa-9acf1c0167f3"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 2,
+            "seed": 9272,
+            "value": 0.1526381022818438,
+            "status": "passed",
+            "executionRecordId": "916dc182-df93-452e-b433-e41fcca5d408"
+          }
+        }
+      ],
+      "executionRecordId": "6727fa02-de88-4ddc-b7d3-90e6a1f0c158",
+      "reportArtifactId": "1ae1dccf-1806-4bc3-99f4-189f7ade6bed",
+      "artifactId": "7394453b-4e35-4d61-b300-0b15ead4a338",
+      "plotArtifactId": "8129d2c6-3b90-4811-a649-be094c703b0b"
+    },
+    {
+      "metric": "rmse",
+      "unit": "amplitude",
+      "pairs": 2,
+      "direction": "comparison minus baseline",
+      "meanDifference": 0.15104388651101758,
+      "sampleSD": 0.002254561564451518,
+      "confidence": 0.95,
+      "interval": null,
+      "method": "descriptive only",
+      "failedChecksIncluded": 0,
+      "warnings": [
+        "Exploratory, single-contrast analysis chosen after the study. No multiple-comparison adjustment. Repeated computations are not independent physical observations.",
+        "Deterministic repeats: no sampling confidence interval is estimated."
+      ],
+      "observations": [
+        {
+          "repeat": 1,
+          "seed": 9271,
+          "baseline": {
+            "case": 1,
+            "repeat": 1,
+            "seed": 9271,
+            "value": 0,
+            "status": "passed",
+            "executionRecordId": "b40483b1-92a6-473d-b467-7cd047021cfc"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 1,
+            "seed": 9271,
+            "value": 0.14944967074019136,
+            "status": "passed",
+            "executionRecordId": "153c3dc0-5faf-4d62-9826-3e238fd8356b"
+          }
+        },
+        {
+          "repeat": 2,
+          "seed": 9272,
+          "baseline": {
+            "case": 1,
+            "repeat": 2,
+            "seed": 9272,
+            "value": 0,
+            "status": "passed",
+            "executionRecordId": "3d2d83b3-681c-4113-b6aa-9acf1c0167f3"
+          },
+          "comparison": {
+            "case": 2,
+            "repeat": 2,
+            "seed": 9272,
+            "value": 0.1526381022818438,
+            "status": "passed",
+            "executionRecordId": "916dc182-df93-452e-b433-e41fcca5d408"
+          }
+        }
+      ],
+      "executionRecordId": "657da1e8-aa2d-4d8c-afce-1e69ad266735",
+      "reportArtifactId": "8bddbae6-b738-4353-bdb2-50a26c517b3c",
+      "artifactId": "320d96d9-6f8f-41af-a532-5153d945b7d1",
+      "plotArtifactId": "86e0a143-c1d7-4ad1-8958-4c52369f3bca"
+    }
+  ],
+  "overflowRejected": true
+}

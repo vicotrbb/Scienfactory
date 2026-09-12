@@ -34,3 +34,4 @@ jobs:
       - run: bun run test:latex
       - run: bun run test:science
       - run: bun run test:study-precision
+      - run: bun run test:comparisons

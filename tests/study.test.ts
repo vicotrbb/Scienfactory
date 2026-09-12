@@ -59,6 +59,12 @@ test('study design rejects excessive grids, duplicate levels and reversed checks
   expect(() =>
     studySchema.parse({ ...spec, metrics: [{ name: 'm', unit: '1', min: 2, max: 1 }] }),
   ).toThrow();
+  expect(
+    studySchema.parse({ ...spec, factors: [{ name: 'n', values: [1, 2] }], repeats: 24 }).repeats,
+  ).toBe(24);
+  expect(() =>
+    studySchema.parse({ ...spec, factors: [{ name: 'n', values: [1, 2] }], repeats: 25 }),
+  ).toThrow('48');
   const trials = studyTrials(studySchema.parse({ ...spec, repeats: 2 }));
   expect(trials).toHaveLength(6);
   expect(trials.map((t) => t.seed)).toEqual([7, 8, 7, 8, 7, 8]);

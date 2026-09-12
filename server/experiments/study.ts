@@ -30,7 +30,7 @@ export const studySchema = z
       .min(1)
       .max(6),
     metrics: z.array(metricSchema).min(1).max(6),
-    repeats: z.number().int().min(1).max(8).default(1),
+    repeats: z.number().int().min(1).max(48).default(1),
     seed: z.number().int().min(0).max(4294967000).default(20260912),
     inputArtifactIds: z.array(z.string()).max(10).default([]),
     requiredOutputs: z

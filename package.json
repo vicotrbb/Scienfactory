@@ -36,7 +36,11 @@
     "test:study-precision": "bun tests/study.precision.ts",
     "test:science-live": "bun tests/science.live.ts",
     "test:science-followup": "bun tests/science.followup.ts",
-    "test:science-review": "bun tests/review-science.ts"
+    "test:science-review": "bun tests/review-science.ts",
+    "lan": "bun run build && bun scripts/lan.ts",
+    "test:comparisons": "bun tests/comparison.integration.ts && bun tests/comparison-controls.ts",
+    "test:lan": "bun tests/lan.live.ts",
+    "test:comparisons-review": "bun tests/review-comparisons.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "0.124.0",

@@ -1,0 +1,28 @@
+/** LAN HTTP lacks randomUUID, but still exposes cryptographically secure random bytes. */
+export function requestId(): string {
+  if (typeof crypto.randomUUID === 'function') return crypto.randomUUID();
+  const bytes = crypto.getRandomValues(new Uint8Array(16));
+  bytes[6] = (bytes[6]! & 0x0f) | 0x40;
+  bytes[8] = (bytes[8]! & 0x3f) | 0x80;
+  const hex = [...bytes].map((b) => b.toString(16).padStart(2, '0')).join('');
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
+
+/** Called only from an explicit copy gesture; preserve focus after the LAN fallback. */
+export async function copyText(text: string): Promise<void> {
+  if (navigator.clipboard?.writeText) return navigator.clipboard.writeText(text);
+  const focused = document.activeElement;
+  const field = document.createElement('textarea');
+  field.value = text;
+  field.readOnly = true;
+  field.style.cssText = 'position:fixed;left:-9999px;top:0';
+  field.setAttribute('aria-label', 'Copy response');
+  document.body.append(field);
+  try {
+    field.select();
+    if (!document.execCommand('copy')) throw new Error('Clipboard is unavailable.');
+  } finally {
+    field.remove();
+    if (focused instanceof HTMLElement) focused.focus({ preventScroll: true });
+  }
+}

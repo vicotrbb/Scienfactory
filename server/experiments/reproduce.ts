@@ -2,6 +2,7 @@ import { z } from 'zod';
 import type { ToolContext } from '../toolkit';
 import { executeExperiment, type ExecutionRecord } from './execution';
 import { present } from '../canvas';
+import { readExecutionRecord } from './records';
 export const reproduceSchema = z.object({
   executionRecordId: z.string(),
   title: z.string().max(160).default('Reproducibility check'),
@@ -9,24 +10,13 @@ export const reproduceSchema = z.object({
 
 export async function reproduceExecution(args: unknown, ctx: ToolContext) {
   const request = reproduceSchema.parse(args);
-  const saved = await ctx.store.readArtifact(ctx.researchId, request.executionRecordId);
-  if (!saved.provenance.startsWith('Execution record for '))
-    throw new Error('Select an actual execution record.');
-  const original = JSON.parse(Buffer.from(saved.data, 'base64').toString()) as ExecutionRecord;
-  if (original.version !== 2 || !original.environment || !Array.isArray(original.inputs))
-    throw new Error(
-      'This historical execution lacks complete input or container provenance. Run a new baseline first.',
-    );
+  const {
+    saved,
+    record: original,
+    source,
+  } = await readExecutionRecord(request.executionRecordId, ctx);
   if (original.exitCode !== 0)
     throw new Error('A reproducibility comparison needs a successfully completed baseline.');
-  const source = await ctx.store.readArtifact(ctx.researchId, original.source);
-  if (source.sha256 !== original.sourceHash)
-    throw new Error('Recorded source hash differs from the saved input.');
-  for (const input of original.inputs) {
-    const a = await ctx.store.readArtifact(ctx.researchId, input.id);
-    if (a.sha256 !== input.sha256 || a.name !== input.name)
-      throw new Error('Recorded input identity differs from saved evidence.');
-  }
   const rerun = await executeExperiment(
     {
       title: request.title,
