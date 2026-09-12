@@ -185,12 +185,17 @@ export class Store {
     const artifact = this.get<Artifact>('artifact', id);
     if (!artifact || artifact.researchId !== researchId)
       throw new Error('Artifact not found in this research.');
-    return {
-      ...artifact,
-      data: Buffer.from(
-        await Bun.file(join(this.root, 'blobs', artifact.sha256)).arrayBuffer(),
-      ).toString('base64'),
-    };
+    if (!/^[a-f0-9]{64}$/.test(artifact.sha256))
+      throw new Error('Invalid artifact content address.');
+    const bytes = await Bun.file(join(this.root, 'blobs', artifact.sha256)).bytes();
+    if (
+      new Bun.CryptoHasher('sha256').update(bytes).digest('hex') !== artifact.sha256 ||
+      bytes.byteLength !== artifact.size
+    )
+      throw new Error(
+        'Artifact integrity check failed. Restore the original bytes before using this evidence.',
+      );
+    return { ...artifact, data: Buffer.from(bytes).toString('base64') };
   }
   config(): Settings | undefined {
     const row = this.db.query("SELECT data FROM config WHERE key='settings'").get() as {

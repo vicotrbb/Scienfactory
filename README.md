@@ -90,6 +90,20 @@ LAB_IMAGE=scienfactory-lab:mathlib bun run dev
 
 This image downloads the Mathlib v4.24.0 project and its compiled cache at build time. Check the [validation record](docs/validation.md) for whether it was built and tested on this installation.
 
+## Parameter studies and reproducibility
+
+The agent can run parameter grids, repeated simulations, convergence checks and ablations with `run_study`. It saves the protocol before execution, records paired seeds, runs up to 48 isolated trials, retains failed cases, and automatically updates the existing canvas with criteria, outcomes, CSV data and charts. Declare `requiredOutputs` for essential raw data so missing or empty files fail visibly. Each metric can include a scientific rationale and numerical bounds.
+
+`reproduce_execution` reruns the original source and exact input versions under the recorded Docker image, then compares full console output and artifact hashes. It refuses legacy records without sufficient provenance and unavailable images. Exact replay checks repeatability; independent implementations and scientific review establish different evidence. `research_guide` supplies methods and pitfalls for numerical analysis, statistics, combinatorics, learning, dynamics and optimization.
+
+See the [multi-subject stress-test evidence](docs/science-validation.md), including real OpenAI oscillator research, heat diffusion, graph enumeration, statistical robustness, and an interactive 3D surface.
+
+```sh
+bun run test:science         # Real containers; no provider calls
+bun run test:study-precision # NumPy scalar and exact-integer controls
+bun run test:science-live    # Explicit paid OpenAI investigation in a fresh workspace
+```
+
 ## Research limits and control
 
 Defaults: 16 total agents, four concurrent model calls, 24 steps per agent, 4,096 output tokens per step, and a 200,000-token run budget. Provider calls are admitted against a conservative byte-based input bound plus the output limit; a run can stop before its nominal budget is exhausted. Usage totals reflect successful provider responses, not an authoritative billing ledger. Provider retries, interrupted calls, and failures may incur charges not reported in those totals.

@@ -1,0 +1,122 @@
+{
+  "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+  "verifiedTrajectories": 12,
+  "records": [
+    {
+      "version": 2,
+      "sourceHash": "71e5032ffc2abe1514f1a7a5afa47e93fa33539198a7bb50eced97559591e1d7",
+      "inputs": [
+        {
+          "id": "434803c4-b707-488d-b0b3-7e38731c463a",
+          "name": "trajectory_zeta0.0_solverRK45.csv",
+          "sha256": "c12158f6e8903a0a5d34e2000365ddf9bfb6381f16e7782fcd01bbb793261bd0"
+        },
+        {
+          "id": "0f53caf9-1e61-4b26-acb6-cf0a2c8f88b4",
+          "name": "trajectory_zeta0.0_solverDOP853.csv",
+          "sha256": "856a884616556e7c142825a6dae9739ef0baec5419951a3e6f09c9b0373fc175"
+        },
+        {
+          "id": "3fd74add-ebb4-4dc0-b1e3-a41971f5faa1",
+          "name": "trajectory_zeta0.2_solverRK45.csv",
+          "sha256": "ee23990c4796785ca9d5f3cc5781ff02e11dfee3a228107bf2fb387bc93976b1"
+        },
+        {
+          "id": "cddf1485-cc5d-42b7-9d33-11d30bb8acf9",
+          "name": "trajectory_zeta0.0_solverRadau.csv",
+          "sha256": "21b3ec6882cd9312f69bdc74d32c781cbc541cca6c4b1e88f2d93e3c0979eaa9"
+        },
+        {
+          "id": "7e4ee113-0f5e-48e8-a76a-f0fd11739c61",
+          "name": "trajectory_zeta0.2_solverDOP853.csv",
+          "sha256": "04054fc8a0d9b52c09a953c8e495885087e81760eb1ee3e878e5386e6329b624"
+        },
+        {
+          "id": "b2d3316c-0737-4c19-869c-23ee7ea3a83b",
+          "name": "trajectory_zeta0.2_solverRadau.csv",
+          "sha256": "c9671cf11bbd6595382cb794e22022017eb4cd20f586422ff6c64f824ca009e1"
+        }
+      ],
+      "environment": {
+        "imageId": "sha256:50e0121ba0e882e7c019a37b4fd94503697cbf6d1f160f230eb996056b3e75c8",
+        "platform": "linux/arm64"
+      },
+      "language": "python",
+      "source": "1f3aa39d-94d4-453d-b896-029e2f9e1771",
+      "exitCode": 0,
+      "stdout": "[\n  {\n    \"file\": \"trajectory_zeta0.0_solverDOP853.csv\",\n    \"referenceError\": 1.396660564978447e-13,\n    \"numericalError\": 1.7755321812806812e-07\n  },\n  {\n    \"file\": \"trajectory_zeta0.0_solverRK45.csv\",\n    \"referenceError\": 1.396660564978447e-13,\n    \"numericalError\": 1.2682139494124556e-07\n  },\n  {\n    \"file\": \"trajectory_zeta0.0_solverRadau.csv\",\n    \"referenceError\": 1.396660564978447e-13,\n    \"numericalError\": 1.1329754801003844e-08\n  },\n  {\n    \"file\": \"trajectory_zeta0.2_solverDOP853.csv\",\n    \"referenceError\": 2.9091312692131055e-14,\n    \"numericalError\": 8.903413009631045e-08\n  },\n  {\n    \"file\": \"trajectory_zeta0.2_solverRK45.csv\",\n    \"referenceError\": 2.9091312692131055e-14,\n    \"numericalError\": 3.2868664318064233e-08\n  },\n  {\n    \"file\": \"trajectory_zeta0.2_solverRadau.csv\",\n    \"referenceError\": 2.9091312692131055e-14,\n    \"numericalError\": 4.759403871013035e-09\n  }\n]\n",
+      "durationMs": 141,
+      "artifacts": [
+        {
+          "id": "c68bfe1d-57b9-47ec-b8eb-36914edbe38f",
+          "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+          "name": "closed-form-verification.json",
+          "mime": "application/json",
+          "size": 897,
+          "sha256": "d1726bedb5cbd1720e99b080ba5241da4eadee497334c56be0498c7053f55ef7",
+          "createdAt": 1789229911515,
+          "provenance": "Execution 1f3aa39d-94d4-453d-b896-029e2f9e1771; exit 0; python"
+        }
+      ],
+      "executionRecordId": "54119e2d-d191-4a58-87fe-3f841c7ac72b"
+    },
+    {
+      "version": 2,
+      "sourceHash": "71e5032ffc2abe1514f1a7a5afa47e93fa33539198a7bb50eced97559591e1d7",
+      "inputs": [
+        {
+          "id": "906ee80c-00bd-4388-9c58-1880114f8f18",
+          "name": "trajectory_zeta1.0_solverDOP853.csv",
+          "sha256": "f1f3cb01d7a0a51e4a19305273e4c2a9870ac2143a21886e9d0130609c5c3d99"
+        },
+        {
+          "id": "933c31e3-6df4-4be1-b9a6-9dbb11f76197",
+          "name": "trajectory_zeta1.0_solverRK45.csv",
+          "sha256": "2c776449e5bf00e398e658f28e9dbdc24d3bee68f89a48d678717e7c047b7998"
+        },
+        {
+          "id": "35d3c604-75a2-41b4-bdd0-a80d134da1f0",
+          "name": "trajectory_zeta1.0_solverRadau.csv",
+          "sha256": "3499d16a64fa76f526269061df28ff383a99b14e91e3caef933e101b3e72fec5"
+        },
+        {
+          "id": "43162028-12c4-4b4c-b17a-171232c8faa1",
+          "name": "trajectory_zeta2.0_solverRK45.csv",
+          "sha256": "1c32dd4f8fba888bea263a5dab5dcc62272f81ab34e2ca6a5e20405601f085c3"
+        },
+        {
+          "id": "949f8e4c-1e5a-4c3d-9df4-78ca426587bc",
+          "name": "trajectory_zeta2.0_solverDOP853.csv",
+          "sha256": "bf33981b6892bf4dc6dc136f6aeebd1b6ffe7843add415f0a5bae83d27acb7e7"
+        },
+        {
+          "id": "b46be63c-f867-4bd0-b87b-f08165e804c8",
+          "name": "trajectory_zeta2.0_solverRadau.csv",
+          "sha256": "fdbb6c88625490186f2c10bba53937e9420446cd69fb1322e0c1ba5e7d3ea7b2"
+        }
+      ],
+      "environment": {
+        "imageId": "sha256:50e0121ba0e882e7c019a37b4fd94503697cbf6d1f160f230eb996056b3e75c8",
+        "platform": "linux/arm64"
+      },
+      "language": "python",
+      "source": "4c6534b4-2c59-4ef8-b48d-d96dca28c97c",
+      "exitCode": 0,
+      "stdout": "[\n  {\n    \"file\": \"trajectory_zeta1.0_solverDOP853.csv\",\n    \"referenceError\": 3.0808688933348094e-15,\n    \"numericalError\": 1.5185460222610914e-08\n  },\n  {\n    \"file\": \"trajectory_zeta1.0_solverRK45.csv\",\n    \"referenceError\": 3.0808688933348094e-15,\n    \"numericalError\": 6.2650526433394305e-09\n  },\n  {\n    \"file\": \"trajectory_zeta1.0_solverRadau.csv\",\n    \"referenceError\": 3.0808688933348094e-15,\n    \"numericalError\": 2.603876447793141e-09\n  },\n  {\n    \"file\": \"trajectory_zeta2.0_solverDOP853.csv\",\n    \"referenceError\": 2.1371793224034263e-15,\n    \"numericalError\": 6.208863235004913e-07\n  },\n  {\n    \"file\": \"trajectory_zeta2.0_solverRK45.csv\",\n    \"referenceError\": 2.1371793224034263e-15,\n    \"numericalError\": 1.1519761200506906e-08\n  },\n  {\n    \"file\": \"trajectory_zeta2.0_solverRadau.csv\",\n    \"referenceError\": 2.1371793224034263e-15,\n    \"numericalError\": 7.243909472265386e-09\n  }\n]\n",
+      "durationMs": 72,
+      "artifacts": [
+        {
+          "id": "e330cfcc-d067-4516-93ea-6e2f0d5f12c8",
+          "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+          "name": "closed-form-verification.json",
+          "mime": "application/json",
+          "size": 899,
+          "sha256": "77eb567120c6ddf2bc9085ed90918058f4efbcc99a88c928f428c7f05960b20a",
+          "createdAt": 1789229912122,
+          "provenance": "Execution 4c6534b4-2c59-4ef8-b48d-d96dca28c97c; exit 0; python"
+        }
+      ],
+      "executionRecordId": "6924a911-6a39-4913-a53f-a023fac1ae14"
+    }
+  ]
+}

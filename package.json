@@ -31,7 +31,12 @@
     "test:publishing": "bun tests/publishing.local.ts",
     "test:publishing-browser": "bun tests/publishing.browser.ts",
     "test:publishing-review": "bun tests/review-publishing.ts",
-    "test:article-live": "bun tests/article.live.ts"
+    "test:article-live": "bun tests/article.live.ts",
+    "test:science": "bun tests/science.integration.ts",
+    "test:study-precision": "bun tests/study.precision.ts",
+    "test:science-live": "bun tests/science.live.ts",
+    "test:science-followup": "bun tests/science.followup.ts",
+    "test:science-review": "bun tests/review-science.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "0.124.0",

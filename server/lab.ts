@@ -2,11 +2,13 @@ import type { Capabilities, Language } from '../shared/protocol';
 import { Semaphore } from './concurrency';
 
 export interface LabRequest {
+  imageId?: string;
   language: Language;
   code: string;
   inputs?: { name: string; data: string }[];
 }
 export interface LabResult {
+  environment?: { imageId: string; platform: string };
   exitCode: number;
   stdout: string;
   durationMs: number;
@@ -87,6 +89,32 @@ export class DockerLab implements Lab {
     onOutput: (text: string) => void = () => {},
   ): Promise<LabResult> {
     return this.slots.use(signal, async () => {
+      const reference = request.imageId ?? IMAGE;
+      if (request.imageId && !/^sha256:[a-f0-9]{64}$/.test(request.imageId))
+        throw new Error('Invalid recorded container image identity.');
+      const inspect = Bun.spawn(
+        ['docker', 'image', 'inspect', reference, '--format', '{{json .}}'],
+        { stdout: 'pipe', stderr: 'pipe' },
+      );
+      const inspectTimer = setTimeout(() => inspect.kill(), 3000);
+      let environment: { imageId: string; platform: string };
+      try {
+        const [output] = await Promise.all([
+          boundedText(inspect.stdout, 131072),
+          boundedText(inspect.stderr),
+        ]);
+        if ((await inspect.exited) !== 0)
+          throw new Error(
+            'The recorded or configured worker image is not available locally. Restore that image before running.',
+          );
+        const info = JSON.parse(output);
+        if (!/^sha256:[a-f0-9]{64}$/.test(info.Id))
+          throw new Error('Worker image identity could not be verified.');
+        environment = { imageId: info.Id, platform: `${info.Os}/${info.Architecture}` };
+      } finally {
+        clearTimeout(inspectTimer);
+      }
+      signal.throwIfAborted();
       const name = `scienfactory-job-${crypto.randomUUID()}`;
       const process = Bun.spawn(
         [
@@ -125,7 +153,7 @@ export class DockerLab implements Lab {
           '/tmp:rw,nosuid,size=256m,mode=1777',
           '--tmpfs',
           '/workspace:rw,nosuid,size=512m,mode=1777',
-          IMAGE,
+          environment.imageId,
         ],
         { stdin: 'pipe', stdout: 'pipe', stderr: 'pipe' },
       );
@@ -152,7 +180,13 @@ export class DockerLab implements Lab {
       const timeout = setTimeout(stop, 125000);
       process.stdin.write(JSON.stringify(request) + '\n');
       process.stdin.end();
-      const result: LabResult = { exitCode: -1, stdout: '', durationMs: 0, artifacts: [] };
+      const result: LabResult = {
+        environment,
+        exitCode: -1,
+        stdout: '',
+        durationMs: 0,
+        artifacts: [],
+      };
       const errorText = boundedText(process.stderr);
       let buffer = '';
       const decoder = new TextDecoder();

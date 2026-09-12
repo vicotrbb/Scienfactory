@@ -1,0 +1,102 @@
+{
+  "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+  "verifiedTrajectories": 8,
+  "records": [
+    {
+      "version": 2,
+      "sourceHash": "d5532ffe13c31cd22cfd3bc073704b1f9e9de3a08c0c182fdf86cf4b7188bfce",
+      "inputs": [
+        {
+          "id": "a89434f5-00c2-4c13-a255-e27d826daf3a",
+          "name": "heldout_trajectory_zeta0.1_solverDOP853.csv",
+          "sha256": "1567a75804ad723afafb6bdd11082adad8a7749bb0b6855ea11694167ae5c27a"
+        },
+        {
+          "id": "916d9182-e2af-4e14-bb27-3fd1485e2626",
+          "name": "heldout_trajectory_zeta0.1_solverRadau.csv",
+          "sha256": "026affc0a5634b72ef4a73477961496933f1fef46db68dc4476d1fb9ec5f1f59"
+        },
+        {
+          "id": "d8075075-c62d-4cbc-be7a-ab44090bf711",
+          "name": "heldout_trajectory_zeta0.5_solverRadau.csv",
+          "sha256": "dcf61bef1b0e7850561f4a3256ed02e2ea917315a4ed8fbd8a7f202736a24cfd"
+        },
+        {
+          "id": "afd916d4-6fc5-4b56-b765-f91dc8ff102c",
+          "name": "heldout_trajectory_zeta0.5_solverDOP853.csv",
+          "sha256": "37a8297b38d5207d72d51a80ba8aa585b043a7ffc9ce96de8e753055e9647670"
+        },
+        {
+          "id": "00a28752-62e8-41f5-add6-0985e7026be4",
+          "name": "heldout_trajectory_zeta1.5_solverRadau.csv",
+          "sha256": "b90c2c7647bbdb09abc31544d1f12f6867db32c0124326e3d6e59978d6f4fa7d"
+        },
+        {
+          "id": "5cef7172-fbb3-440b-b91c-2a364f8fa8a2",
+          "name": "heldout_trajectory_zeta1.5_solverDOP853.csv",
+          "sha256": "c1f5986e56fe20d9274a90bacfe22cca4b1d870b318a30e7e1c7871ccdba81b7"
+        }
+      ],
+      "environment": {
+        "imageId": "sha256:50e0121ba0e882e7c019a37b4fd94503697cbf6d1f160f230eb996056b3e75c8",
+        "platform": "linux/arm64"
+      },
+      "language": "python",
+      "source": "4a13271a-ff5b-4370-b0fc-de16f6cb58cc",
+      "exitCode": 0,
+      "stdout": "[\n  {\n    \"file\": \"heldout_trajectory_zeta0.1_solverDOP853.csv\",\n    \"referenceError\": 4.056824320919361e-14,\n    \"numericalError\": 1.215207050542233e-07\n  },\n  {\n    \"file\": \"heldout_trajectory_zeta0.1_solverRadau.csv\",\n    \"referenceError\": 4.056824320919361e-14,\n    \"numericalError\": 8.311909049929511e-09\n  },\n  {\n    \"file\": \"heldout_trajectory_zeta0.5_solverDOP853.csv\",\n    \"referenceError\": 7.820133429703446e-15,\n    \"numericalError\": 8.693613595678329e-08\n  },\n  {\n    \"file\": \"heldout_trajectory_zeta0.5_solverRadau.csv\",\n    \"referenceError\": 7.820133429703446e-15,\n    \"numericalError\": 7.953224301360251e-09\n  },\n  {\n    \"file\": \"heldout_trajectory_zeta1.5_solverDOP853.csv\",\n    \"referenceError\": 3.913536161803677e-15,\n    \"numericalError\": 4.770964658062926e-09\n  },\n  {\n    \"file\": \"heldout_trajectory_zeta1.5_solverRadau.csv\",\n    \"referenceError\": 3.913536161803677e-15,\n    \"numericalError\": 2.8788857409089985e-09\n  }\n]\n",
+      "durationMs": 55,
+      "artifacts": [
+        {
+          "id": "0549371c-d45a-4db7-8f49-e3482dc8fbbf",
+          "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+          "name": "closed-form-verification.json",
+          "mime": "application/json",
+          "size": 942,
+          "sha256": "2682530d365d416cd8fc82256df4befa40dbc4100ec8cd29ae2c957fe5599af2",
+          "createdAt": 1789230541272,
+          "provenance": "Execution 4a13271a-ff5b-4370-b0fc-de16f6cb58cc; exit 0; python"
+        }
+      ],
+      "executionRecordId": "0ad9fd16-a1e4-4023-a860-1ffe19e40045"
+    },
+    {
+      "version": 2,
+      "sourceHash": "d5532ffe13c31cd22cfd3bc073704b1f9e9de3a08c0c182fdf86cf4b7188bfce",
+      "inputs": [
+        {
+          "id": "11652314-1a5a-43ea-a2dd-829ced4ec0c0",
+          "name": "heldout_trajectory_zeta3_solverDOP853.csv",
+          "sha256": "0ab4c46a9b2d54dc66e655331f9f2778e84036a576924670bce0fcf1f4f0bbd6"
+        },
+        {
+          "id": "77bcf061-14a7-4627-9986-d4e030c6fad9",
+          "name": "heldout_trajectory_zeta3_solverRadau.csv",
+          "sha256": "77d1e6e01eb0522676e969c664d81031f6f1cda4c8c7f800422649c9f741fb35"
+        }
+      ],
+      "environment": {
+        "imageId": "sha256:50e0121ba0e882e7c019a37b4fd94503697cbf6d1f160f230eb996056b3e75c8",
+        "platform": "linux/arm64"
+      },
+      "language": "python",
+      "source": "150e6e92-9ad8-4aed-a811-5158713cadcd",
+      "exitCode": 0,
+      "stdout": "[\n  {\n    \"file\": \"heldout_trajectory_zeta3_solverDOP853.csv\",\n    \"referenceError\": 1.6653345369377348e-15,\n    \"numericalError\": 1.3809750065707505e-08\n  },\n  {\n    \"file\": \"heldout_trajectory_zeta3_solverRadau.csv\",\n    \"referenceError\": 1.6653345369377348e-15,\n    \"numericalError\": 1.0733402722173935e-08\n  }\n]\n",
+      "durationMs": 47,
+      "artifacts": [
+        {
+          "id": "b1f6b488-b8d3-4a7f-b72d-316ed21f5014",
+          "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+          "name": "closed-form-verification.json",
+          "mime": "application/json",
+          "size": 315,
+          "sha256": "2d75d19d86ed442a20d8bd55e650442903e22af56ba0cd610eef0bc15c30a1eb",
+          "createdAt": 1789230541704,
+          "provenance": "Execution 150e6e92-9ad8-4aed-a811-5158713cadcd; exit 0; python"
+        }
+      ],
+      "executionRecordId": "227be433-9021-4b0f-9f3e-de09bf3a291f"
+    }
+  ]
+}

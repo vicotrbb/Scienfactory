@@ -6,6 +6,8 @@ import type { ProviderFactory } from '../server/providers';
 
 // Deterministic provider fixture for browser tests; never used by the application.
 const provider: ProviderFactory = (options) => {
+  const studyTest = options.messages.at(-1)?.content.includes('STUDY_ACCEPTANCE');
+  let studyExecutionId = '';
   const canvasTest = options.messages.at(-1)?.content.includes('CANVAS_ACCEPTANCE');
   const loadTest = options.messages.at(-1)?.content.includes('LOAD_ACCEPTANCE');
   let presentationId = '';
@@ -29,11 +31,61 @@ const provider: ProviderFactory = (options) => {
   return {
     inputBound: () => 100,
     result: (call, result) => {
+      if (call.name === 'run_study')
+        studyExecutionId = JSON.parse(result).trials[0].executionRecordId;
       if (call.name === 'present') presentationId = JSON.parse(result).itemId;
       pendingTool = call.name;
     },
     turn: async (signal, onText, onToolInput) => {
       turn++;
+      if (studyTest) {
+        if (turn === 1)
+          return {
+            text: 'Testing three parameter cases.',
+            inputTokens: 10,
+            outputTokens: 10,
+            calls: [
+              {
+                id: 'study',
+                name: 'run_study',
+                arguments: {
+                  title: 'A controlled parameter study',
+                  question: 'Do the three trial metrics meet their declared bounds?',
+                  hypothesis: 'Compare every case, retaining the negative control.',
+                  limitations: 'Deterministic browser fixture only.',
+                  factors: [{ name: 'case_number', values: [1, 2, 3] }],
+                  metrics: [{ name: 'error', unit: '1', min: 0, max: 0.1 }],
+                  code: 'metrics = {"error": 0.01}',
+                  seed: 7,
+                  repeats: 1,
+                },
+              },
+            ],
+          };
+        if (turn === 2)
+          return {
+            text: 'The negative control failed as expected. Checking reproducibility.',
+            inputTokens: 10,
+            outputTokens: 10,
+            calls: [
+              {
+                id: 'reproduce',
+                name: 'reproduce_execution',
+                arguments: {
+                  executionRecordId: studyExecutionId,
+                  title: 'Exact rerun of the first case',
+                },
+              },
+            ],
+          };
+        onText('Two cases passed; one failed its declared check. The exact rerun matched.');
+        return {
+          text: 'Two cases passed; one failed its declared check. The exact rerun matched.',
+          calls: [],
+          inputTokens: 10,
+          outputTokens: 10,
+        };
+      }
       if (loadTest) {
         await Bun.sleep(20);
         signal.throwIfAborted();
@@ -175,21 +227,32 @@ const runtime = createApp({
   keys: { openai: 'test-only-key', anthropic: '' },
   lab: {
     capabilities: async () => ({ docker: true, image: true, detail: 'Deterministic test lab' }),
-    execute: async (_request, signal, onOutput) => {
+    execute: async (request, signal, onOutput) => {
       signal.throwIfAborted();
       onOutput?.('42\n');
       await Bun.sleep(1500);
       return {
+        environment: { imageId: 'sha256:' + 'a'.repeat(64), platform: 'linux/fixture' },
         exitCode: 0,
         stdout: '42\n',
         durationMs: 100,
-        artifacts: [
-          {
-            name: 'result.json',
-            mime: 'application/json',
-            data: Buffer.from('{"result":42}').toString('base64'),
-          },
-        ],
+        artifacts: request.code.includes('Study case')
+          ? [
+              {
+                name: 'study-metrics.json',
+                mime: 'application/json',
+                data: Buffer.from(
+                  JSON.stringify({ error: request.code.includes('Study case 2,') ? 1 : 0.01 }),
+                ).toString('base64'),
+              },
+            ]
+          : [
+              {
+                name: 'result.json',
+                mime: 'application/json',
+                data: Buffer.from('{"result":42}').toString('base64'),
+              },
+            ],
       };
     },
   },

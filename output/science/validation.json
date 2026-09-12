@@ -1,0 +1,419 @@
+{
+  "researchId": "7e15a47d-56f8-4f1b-b1e5-4e6ce45569de",
+  "summaries": [
+    {
+      "title": "Heat equation · numerical convergence",
+      "trials": 6,
+      "status": "completed",
+      "reproduction": "matched",
+      "results": [
+        {
+          "parameters": {
+            "cells": 16,
+            "cfl": 0.2
+          },
+          "repeat": 1,
+          "metrics": {
+            "max_error": 0.00009432726900437949,
+            "minimum": 0,
+            "effective_cfl": 0.19692307692307695
+          }
+        },
+        {
+          "parameters": {
+            "cells": 16,
+            "cfl": 0.4
+          },
+          "repeat": 1,
+          "metrics": {
+            "max_error": 0.0007145320781917208,
+            "minimum": 0,
+            "effective_cfl": 0.3938461538461539
+          }
+        },
+        {
+          "parameters": {
+            "cells": 32,
+            "cfl": 0.2
+          },
+          "repeat": 1,
+          "metrics": {
+            "max_error": 0.000025109294273684135,
+            "minimum": 0,
+            "effective_cfl": 0.1988349514563107
+          }
+        },
+        {
+          "parameters": {
+            "cells": 32,
+            "cfl": 0.4
+          },
+          "repeat": 1,
+          "metrics": {
+            "max_error": 0.00017770292058660875,
+            "minimum": 0,
+            "effective_cfl": 0.3938461538461539
+          }
+        },
+        {
+          "parameters": {
+            "cells": 64,
+            "cfl": 0.2
+          },
+          "repeat": 1,
+          "metrics": {
+            "max_error": 0.000006468519270330653,
+            "minimum": 0,
+            "effective_cfl": 0.19980487804878053
+          }
+        },
+        {
+          "parameters": {
+            "cells": 64,
+            "cfl": 0.4
+          },
+          "repeat": 1,
+          "metrics": {
+            "max_error": 0.000045494104005006086,
+            "minimum": 0,
+            "effective_cfl": 0.39960975609756105
+          }
+        }
+      ]
+    },
+    {
+      "title": "Graph theory · independent tree counts",
+      "trials": 8,
+      "status": "completed",
+      "reproduction": "matched",
+      "results": [
+        {
+          "parameters": {
+            "vertices": 3,
+            "family": "cycle"
+          },
+          "repeat": 1,
+          "metrics": {
+            "trees": 3,
+            "disagreement": 0
+          }
+        },
+        {
+          "parameters": {
+            "vertices": 3,
+            "family": "complete"
+          },
+          "repeat": 1,
+          "metrics": {
+            "trees": 3,
+            "disagreement": 0
+          }
+        },
+        {
+          "parameters": {
+            "vertices": 4,
+            "family": "cycle"
+          },
+          "repeat": 1,
+          "metrics": {
+            "trees": 4,
+            "disagreement": 0
+          }
+        },
+        {
+          "parameters": {
+            "vertices": 4,
+            "family": "complete"
+          },
+          "repeat": 1,
+          "metrics": {
+            "trees": 16,
+            "disagreement": 0
+          }
+        },
+        {
+          "parameters": {
+            "vertices": 5,
+            "family": "cycle"
+          },
+          "repeat": 1,
+          "metrics": {
+            "trees": 5,
+            "disagreement": 0
+          }
+        },
+        {
+          "parameters": {
+            "vertices": 5,
+            "family": "complete"
+          },
+          "repeat": 1,
+          "metrics": {
+            "trees": 125,
+            "disagreement": 0
+          }
+        },
+        {
+          "parameters": {
+            "vertices": 6,
+            "family": "cycle"
+          },
+          "repeat": 1,
+          "metrics": {
+            "trees": 6,
+            "disagreement": 0
+          }
+        },
+        {
+          "parameters": {
+            "vertices": 6,
+            "family": "complete"
+          },
+          "repeat": 1,
+          "metrics": {
+            "trees": 1296,
+            "disagreement": 0
+          }
+        }
+      ]
+    },
+    {
+      "title": "Statistics · robustness and interval calibration",
+      "trials": 18,
+      "status": "completed",
+      "reproduction": "matched",
+      "results": [
+        {
+          "parameters": {
+            "sample_size": 20,
+            "contamination": 0
+          },
+          "repeat": 1,
+          "metrics": {
+            "mean_rmse": 0.22365794322140445,
+            "median_rmse": 0.28107890503264593,
+            "coverage": 0.9433333333333334
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 20,
+            "contamination": 0
+          },
+          "repeat": 2,
+          "metrics": {
+            "mean_rmse": 0.2257924335504643,
+            "median_rmse": 0.27916410110894685,
+            "coverage": 0.9483333333333334
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 20,
+            "contamination": 0
+          },
+          "repeat": 3,
+          "metrics": {
+            "mean_rmse": 0.22479722691532017,
+            "median_rmse": 0.2801137054691739,
+            "coverage": 0.94
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 20,
+            "contamination": 0.02
+          },
+          "repeat": 1,
+          "metrics": {
+            "mean_rmse": 0.42309957137596454,
+            "median_rmse": 0.2789773602083411,
+            "coverage": 0.9216666666666666
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 20,
+            "contamination": 0.02
+          },
+          "repeat": 2,
+          "metrics": {
+            "mean_rmse": 0.4187783426306669,
+            "median_rmse": 0.2891731599761402,
+            "coverage": 0.9016666666666666
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 20,
+            "contamination": 0.02
+          },
+          "repeat": 3,
+          "metrics": {
+            "mean_rmse": 0.4277708378367747,
+            "median_rmse": 0.2840397445840908,
+            "coverage": 0.8983333333333333
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 80,
+            "contamination": 0
+          },
+          "repeat": 1,
+          "metrics": {
+            "mean_rmse": 0.11216203621659541,
+            "median_rmse": 0.13364649521924318,
+            "coverage": 0.9483333333333334
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 80,
+            "contamination": 0
+          },
+          "repeat": 2,
+          "metrics": {
+            "mean_rmse": 0.11438607732662033,
+            "median_rmse": 0.14303877589953495,
+            "coverage": 0.9466666666666667
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 80,
+            "contamination": 0
+          },
+          "repeat": 3,
+          "metrics": {
+            "mean_rmse": 0.11297516417738743,
+            "median_rmse": 0.1404966240680696,
+            "coverage": 0.9366666666666666
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 80,
+            "contamination": 0.02
+          },
+          "repeat": 1,
+          "metrics": {
+            "mean_rmse": 0.2720664706655572,
+            "median_rmse": 0.13618170303462718,
+            "coverage": 0.9083333333333333
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 80,
+            "contamination": 0.02
+          },
+          "repeat": 2,
+          "metrics": {
+            "mean_rmse": 0.2646965400848968,
+            "median_rmse": 0.14729116846360324,
+            "coverage": 0.915
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 80,
+            "contamination": 0.02
+          },
+          "repeat": 3,
+          "metrics": {
+            "mean_rmse": 0.2830366747931327,
+            "median_rmse": 0.14256155942111573,
+            "coverage": 0.915
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 320,
+            "contamination": 0
+          },
+          "repeat": 1,
+          "metrics": {
+            "mean_rmse": 0.054943962466021914,
+            "median_rmse": 0.06963480187415262,
+            "coverage": 0.9616666666666667
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 320,
+            "contamination": 0
+          },
+          "repeat": 2,
+          "metrics": {
+            "mean_rmse": 0.05594932478333547,
+            "median_rmse": 0.06902892980415469,
+            "coverage": 0.9483333333333334
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 320,
+            "contamination": 0
+          },
+          "repeat": 3,
+          "metrics": {
+            "mean_rmse": 0.0547182742138423,
+            "median_rmse": 0.06721632615195841,
+            "coverage": 0.9483333333333334
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 320,
+            "contamination": 0.02
+          },
+          "repeat": 1,
+          "metrics": {
+            "mean_rmse": 0.2188840161825408,
+            "median_rmse": 0.07440922661622741,
+            "coverage": 0.9416666666666667
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 320,
+            "contamination": 0.02
+          },
+          "repeat": 2,
+          "metrics": {
+            "mean_rmse": 0.22341947329213457,
+            "median_rmse": 0.07404021128071211,
+            "coverage": 0.9416666666666667
+          }
+        },
+        {
+          "parameters": {
+            "sample_size": 320,
+            "contamination": 0.02
+          },
+          "repeat": 3,
+          "metrics": {
+            "mean_rmse": 0.2184628922882154,
+            "median_rmse": 0.07343704629304378,
+            "coverage": 0.94
+          }
+        }
+      ]
+    }
+  ],
+  "negativeControls": [
+    {
+      "status": "passed"
+    },
+    {
+      "status": "failed",
+      "error": "Outside declared bounds: error"
+    },
+    {
+      "status": "failed",
+      "error": "Declared metrics are missing."
+    }
+  ],
+  "threeD": true
+}

@@ -1,0 +1,380 @@
+{
+  "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+  "root": ".data/science-live-nRakPA",
+  "status": "completed",
+  "elapsedSeconds": 197,
+  "runs": [
+    {
+      "id": "595141e8-f365-418f-86eb-b9ba567dbe8b",
+      "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+      "status": "completed",
+      "inputTokens": 254018,
+      "outputTokens": 10489,
+      "settings": {
+        "provider": "openai",
+        "model": "gpt-5-mini",
+        "limits": {
+          "maxAgents": 2,
+          "concurrency": 2,
+          "maxSteps": 16,
+          "maxOutputTokens": 8192,
+          "tokenBudget": 400000
+        }
+      },
+      "createdAt": 1789229467558,
+      "error": null
+    }
+  ],
+  "studies": [
+    {
+      "status": "completed",
+      "trials": 12,
+      "failed": 0
+    }
+  ],
+  "replays": [
+    "matched"
+  ],
+  "files": [
+    {
+      "id": "87858310-9b1a-4ec8-a9e6-3753e1f0889f",
+      "name": "study-28246751-5943-4741-a922-fa90db8fade7-protocol.json"
+    },
+    {
+      "id": "5bc5abb8-f111-4a90-aacd-d05b671fd1e2",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "158d559b-eb6b-4ba5-9c79-72058bc8daa2",
+      "name": "python-1789229541902.py"
+    },
+    {
+      "id": "bc4b187b-4c52-456f-bb0f-26441c17377a",
+      "name": "python-1789229541902.py"
+    },
+    {
+      "id": "4867fb29-7bc4-408f-b86d-f2b474626f15",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "69ac0083-c808-453b-9b95-1c752078dd63",
+      "name": "trajectory_zeta0.0_solverRK45.csv"
+    },
+    {
+      "id": "5c5b6d8f-365e-4527-95ae-02f0705b05a1",
+      "name": "execution-1789229543450.json"
+    },
+    {
+      "id": "f0a0152e-0dec-4e36-9e8e-1cba9ec966d0",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "f73f0681-472c-4ba0-a189-53bbbb1a1efb",
+      "name": "python-1789229543452.py"
+    },
+    {
+      "id": "0fdfe3bf-4323-4a3e-941c-7579dff57e3e",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "0f53caf9-1e61-4b26-acb6-cf0a2c8f88b4",
+      "name": "trajectory_zeta0.0_solverDOP853.csv"
+    },
+    {
+      "id": "9436602c-50c2-4a2a-8ff5-a74f00187055",
+      "name": "execution-1789229543533.json"
+    },
+    {
+      "id": "2d161e3d-bc59-4fb3-84e7-f7e69bb82bce",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "869d35d0-b1c9-4d50-9d58-a32e76e7869a",
+      "name": "python-1789229543534.py"
+    },
+    {
+      "id": "eb47f059-4afb-4646-85ea-fce7286904b2",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "3fd74add-ebb4-4dc0-b1e3-a41971f5faa1",
+      "name": "trajectory_zeta0.2_solverRK45.csv"
+    },
+    {
+      "id": "20995321-4061-4a38-80d3-c51280dcc1cd",
+      "name": "execution-1789229544907.json"
+    },
+    {
+      "id": "80fcd9ce-5666-4b91-b45c-9290c9588eaf",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "af91ae84-68be-4015-a06f-fad669b4f7d7",
+      "name": "python-1789229544909.py"
+    },
+    {
+      "id": "15f36c00-ad8a-4f5b-a7fc-93a72787c513",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "cddf1485-cc5d-42b7-9d33-11d30bb8acf9",
+      "name": "trajectory_zeta0.0_solverRadau.csv"
+    },
+    {
+      "id": "029255fb-1550-433d-90d3-9e2e4a54e1dc",
+      "name": "execution-1789229544952.json"
+    },
+    {
+      "id": "f8f3d69a-ae47-437e-8e8b-8a9fb07602a9",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "9fee5ac1-6203-4b7d-b047-157bedde1c45",
+      "name": "python-1789229544953.py"
+    },
+    {
+      "id": "48ea7c9e-9bab-4924-a232-57e9c647a598",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "7e4ee113-0f5e-48e8-a76a-f0fd11739c61",
+      "name": "trajectory_zeta0.2_solverDOP853.csv"
+    },
+    {
+      "id": "2c76a9ab-966f-45bd-99b9-07d252f0e026",
+      "name": "execution-1789229546144.json"
+    },
+    {
+      "id": "b4722f17-d6c1-45f8-9279-24c6105fc104",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "e089ff16-3130-4469-b2bd-8369182ac2aa",
+      "name": "python-1789229546146.py"
+    },
+    {
+      "id": "b80c2f69-876a-4b48-885d-7f4e96a5087a",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "b2d3316c-0737-4c19-869c-23ee7ea3a83b",
+      "name": "trajectory_zeta0.2_solverRadau.csv"
+    },
+    {
+      "id": "af5a7508-63e2-43db-913f-24ee67418b00",
+      "name": "execution-1789229546238.json"
+    },
+    {
+      "id": "ad5c6fa4-940a-4b3f-891b-ddd439dbf872",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "a7af9540-5bb6-4854-a3ba-d4a8ac60c25b",
+      "name": "python-1789229546239.py"
+    },
+    {
+      "id": "815a6e4b-d624-4e26-9558-e0fa19a95b02",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "906ee80c-00bd-4388-9c58-1880114f8f18",
+      "name": "trajectory_zeta1.0_solverDOP853.csv"
+    },
+    {
+      "id": "c595315e-a824-4761-a144-4bf513802b13",
+      "name": "execution-1789229547420.json"
+    },
+    {
+      "id": "940dd025-e804-44c0-913e-7f75689b2bea",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "b7d6fff3-cd9e-4842-8dd4-2a9be3aa08f2",
+      "name": "python-1789229547422.py"
+    },
+    {
+      "id": "6d817c9c-df68-4e79-b8da-53817ccb11ce",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "933c31e3-6df4-4be1-b9a6-9dbb11f76197",
+      "name": "trajectory_zeta1.0_solverRK45.csv"
+    },
+    {
+      "id": "7d26afb7-4f8c-4d20-b9f6-8a3bdc567103",
+      "name": "execution-1789229547566.json"
+    },
+    {
+      "id": "e9164adb-e78b-4640-a0ae-7886b5474f09",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "e4a49bf7-9400-498a-8e19-7a57b2a41aea",
+      "name": "python-1789229547567.py"
+    },
+    {
+      "id": "88db8c18-752c-458c-a622-d7842c1983a8",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "35d3c604-75a2-41b4-bdd0-a80d134da1f0",
+      "name": "trajectory_zeta1.0_solverRadau.csv"
+    },
+    {
+      "id": "82d6dedc-5556-4cf9-aa78-0dc860a65083",
+      "name": "execution-1789229549211.json"
+    },
+    {
+      "id": "53cb98b9-7869-4e3a-9009-831eb4e92fda",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "5fe8c5c1-fffb-41b3-83db-f3f0b694e294",
+      "name": "python-1789229549213.py"
+    },
+    {
+      "id": "fedba119-3782-4088-a797-b88fd2fca619",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "43162028-12c4-4b4c-b17a-171232c8faa1",
+      "name": "trajectory_zeta2.0_solverRK45.csv"
+    },
+    {
+      "id": "26cfe87c-78f4-4ed8-9c4e-bf904426f331",
+      "name": "execution-1789229549227.json"
+    },
+    {
+      "id": "8d24969d-a1b9-43be-86ff-d97efd0b53ed",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "b9e244b7-4577-4eda-9097-e559674b39ff",
+      "name": "python-1789229549228.py"
+    },
+    {
+      "id": "3646ad57-c90e-41e4-9174-076f27d80b97",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "949f8e4c-1e5a-4c3d-9df4-78ca426587bc",
+      "name": "trajectory_zeta2.0_solverDOP853.csv"
+    },
+    {
+      "id": "b921b1e2-df3e-4023-8519-a6e1433d7b42",
+      "name": "execution-1789229550348.json"
+    },
+    {
+      "id": "1c77a713-6971-4181-b862-932a2be23c77",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "9da59ba9-c347-4f56-b5b9-ce0fa6ecfa4f",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "b46be63c-f867-4bd0-b87b-f08165e804c8",
+      "name": "trajectory_zeta2.0_solverRadau.csv"
+    },
+    {
+      "id": "c907330a-6a5a-4f92-a0ba-bfbc85475dda",
+      "name": "execution-1789229550438.json"
+    },
+    {
+      "id": "f1f6423f-0de1-49e0-b9a5-9bd6e52a15d8",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "5f767f9f-e811-47f3-9a87-20541cbb2743",
+      "name": "study-28246751-5943-4741-a922-fa90db8fade7-results.json"
+    },
+    {
+      "id": "a05669d3-d75f-4fea-b752-713569fd46d4",
+      "name": "study-28246751-5943-4741-a922-fa90db8fade7-results.csv"
+    },
+    {
+      "id": "622d4b71-fb43-41a1-85c0-296ebc0273d2",
+      "name": "study-28246751-5943-4741-a922-fa90db8fade7-max_abs_disp_error.svg"
+    },
+    {
+      "id": "ff9facb2-594b-4044-bb04-ad5ac6d8f916",
+      "name": "study-28246751-5943-4741-a922-fa90db8fade7-nfev.svg"
+    },
+    {
+      "id": "7435457e-7dde-4362-86d4-98c1c856d1f0",
+      "name": "study-28246751-5943-4741-a922-fa90db8fade7-max_pos_energy_increase.svg"
+    },
+    {
+      "id": "dae145d2-eb77-4585-b84c-78e1d61e770a",
+      "name": "Damped oscillator solver comparison.md"
+    },
+    {
+      "id": "501369a7-0721-433b-a626-0460a9e28cd2",
+      "name": "python-1789229556443.py"
+    },
+    {
+      "id": "feb2c953-2695-42b7-baf4-fdf87e7c8065",
+      "name": "study-metrics.json"
+    },
+    {
+      "id": "434803c4-b707-488d-b0b3-7e38731c463a",
+      "name": "trajectory_zeta0.0_solverRK45.csv"
+    },
+    {
+      "id": "e0dc1ce4-961f-49a7-9dbf-a3b1ca8e27f5",
+      "name": "execution-1789229557163.json"
+    },
+    {
+      "id": "b72052e4-5d4c-4e91-9f0a-8c9260560cef",
+      "name": "reproduction-5bb2dba1-7047-4a9c-bb30-acb74867b3fb.json"
+    },
+    {
+      "id": "5ca68f99-e916-4754-905e-98ca3f951762",
+      "name": "Reproducibility check RK45 zeta=0.md"
+    },
+    {
+      "id": "d1ae9006-e963-40e1-a374-2f54218bcd50",
+      "name": "python-1789229573063.py"
+    },
+    {
+      "id": "fcdd1467-f347-4ea5-ae92-981399b93804",
+      "name": "execution-1789229574937.json"
+    },
+    {
+      "id": "b75d3258-9e8d-472a-83d0-991226c52cad",
+      "name": "python-1789229580409.py"
+    },
+    {
+      "id": "d0936c0c-f266-4330-bad5-63f0d3077024",
+      "name": "inspection.json"
+    },
+    {
+      "id": "5b6e205d-d26e-402a-9169-533daefc56bb",
+      "name": "execution-1789229581578.json"
+    },
+    {
+      "id": "653a48e1-0639-4c9a-aebf-2ada71aca3b6",
+      "name": "python-1789229587526.py"
+    },
+    {
+      "id": "247ddcb8-9a7f-41be-b648-44954a60c117",
+      "name": "execution-1789229589264.json"
+    },
+    {
+      "id": "dff645b8-2fb1-4774-acf5-e8718ae30000",
+      "name": "python-1789229598408.py"
+    },
+    {
+      "id": "93befdfc-b797-4045-8bc5-2ce933b5cb30",
+      "name": "phase_plot.png"
+    },
+    {
+      "id": "4b448e50-70c5-4f02-9a52-f31889800908",
+      "name": "execution-1789229599896.json"
+    },
+    {
+      "id": "ebdf531a-4155-42d7-97df-15fc55893abb",
+      "name": "damped_oscillator_report.md"
+    }
+  ]
+}

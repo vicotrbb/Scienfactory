@@ -3,6 +3,9 @@ import { Check, Circle, LoaderCircle, Pause, ChevronDown } from 'lucide-react';
 import type { Snapshot, Agent } from '../shared/protocol';
 
 export const toolLabels: Record<string, string> = {
+  run_study: 'Running a parameter study',
+  reproduce_execution: 'Reproducing an experiment',
+  research_guide: 'Designing the investigation',
   inspect_file: 'Reading file contents',
   article_guide: 'Preparing the manuscript',
   compile_latex: 'Typesetting the article',

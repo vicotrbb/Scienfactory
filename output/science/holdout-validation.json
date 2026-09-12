@@ -1,0 +1,282 @@
+{
+  "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+  "root": ".data/science-live-nRakPA",
+  "status": "completed",
+  "studies": [
+    {
+      "version": 1,
+      "status": "completed",
+      "protocolArtifactId": "5222449e-128e-44f2-955e-b358a6458a02",
+      "warnings": [],
+      "trials": [
+        {
+          "case": 1,
+          "repeat": 1,
+          "seed": 20260912,
+          "parameters": {
+            "zeta": 0.1,
+            "solver": "DOP853"
+          },
+          "status": "passed",
+          "executionRecordId": "67e52afe-b408-4de7-88d8-7d0bc7fb5ceb",
+          "artifacts": [
+            {
+              "id": "1768916c-e3f5-4a50-9ce0-811b44269087",
+              "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+              "name": "study-metrics.json",
+              "mime": "application/json",
+              "size": 91,
+              "sha256": "301475b838e3ae1a9bd39c0531d88c2de4e440177da6581d36cd43f499a8c3ce",
+              "createdAt": 1789230049346,
+              "provenance": "Execution 1a9de2fb-ef2a-4474-b0f0-4a0b3cb3dc01; exit 0; python"
+            }
+          ],
+          "metrics": {
+            "max_abs_disp_error": 1.2152070272275495e-7,
+            "max_pos_energy_increase": 0,
+            "nfev": 332
+          }
+        },
+        {
+          "case": 2,
+          "repeat": 1,
+          "seed": 20260912,
+          "parameters": {
+            "zeta": 0.1,
+            "solver": "Radau"
+          },
+          "status": "passed",
+          "executionRecordId": "43854016-7767-4eb1-9266-60ae8ddc63ed",
+          "artifacts": [
+            {
+              "id": "af298f7b-c7e9-4505-b437-7aefb5f870da",
+              "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+              "name": "study-metrics.json",
+              "mime": "application/json",
+              "size": 91,
+              "sha256": "ab60c01c016da7acd524aa243150f8532f1ab39c860fe47d5a046e05c9ac35fb",
+              "createdAt": 1789230049296,
+              "provenance": "Execution 6508c63a-83fc-45fd-ab5d-39d5d96c994f; exit 0; python"
+            }
+          ],
+          "metrics": {
+            "max_abs_disp_error": 8.311910604241746e-9,
+            "max_pos_energy_increase": 0,
+            "nfev": 2226
+          }
+        },
+        {
+          "case": 3,
+          "repeat": 1,
+          "seed": 20260912,
+          "parameters": {
+            "zeta": 0.5,
+            "solver": "DOP853"
+          },
+          "status": "passed",
+          "executionRecordId": "cf0d0ef6-2625-4912-923a-020980e3d968",
+          "artifacts": [
+            {
+              "id": "968a1349-36f8-4d8b-a71b-22e74bd3cc64",
+              "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+              "name": "study-metrics.json",
+              "mime": "application/json",
+              "size": 90,
+              "sha256": "9866e57624dbb5448519136ea88e41574a8f9d21df8178330b3a9dcb3199b4d9",
+              "createdAt": 1789230050596,
+              "provenance": "Execution d8618432-ecfd-4cee-8912-88e01f73cf45; exit 0; python"
+            }
+          ],
+          "metrics": {
+            "max_abs_disp_error": 8.693613606780559e-8,
+            "max_pos_energy_increase": 0,
+            "nfev": 341
+          }
+        },
+        {
+          "case": 4,
+          "repeat": 1,
+          "seed": 20260912,
+          "parameters": {
+            "zeta": 0.5,
+            "solver": "Radau"
+          },
+          "status": "passed",
+          "executionRecordId": "b6fceed5-eab9-470a-b05c-4217986da69d",
+          "artifacts": [
+            {
+              "id": "77cc5879-b22c-46d5-9d14-cd844161d2ec",
+              "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+              "name": "study-metrics.json",
+              "mime": "application/json",
+              "size": 91,
+              "sha256": "e95e6f9e9827c380acbf4ffa704112f6b7b7f24e86347700ec465fb757c345fa",
+              "createdAt": 1789230050678,
+              "provenance": "Execution 6c1ec66e-da96-45aa-be01-a2b63c4c2dd8; exit 0; python"
+            }
+          ],
+          "metrics": {
+            "max_abs_disp_error": 7.953224190337949e-9,
+            "max_pos_energy_increase": 0,
+            "nfev": 1783
+          }
+        },
+        {
+          "case": 5,
+          "repeat": 1,
+          "seed": 20260912,
+          "parameters": {
+            "zeta": 1.5,
+            "solver": "DOP853"
+          },
+          "status": "passed",
+          "executionRecordId": "32d8eb18-fb07-4560-9cde-1c7c087b16fe",
+          "artifacts": [
+            {
+              "id": "40f2f1f9-ed71-4aac-b1ed-e72e65db9872",
+              "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+              "name": "study-metrics.json",
+              "mime": "application/json",
+              "size": 90,
+              "sha256": "e0df61e3cd21f3a433e11228c7294a9ae967449a6f2b49f211aa5c6a7bae8494",
+              "createdAt": 1789230051651,
+              "provenance": "Execution 5e78c7d1-2d83-4099-b789-811b3bd49af5; exit 0; python"
+            }
+          ],
+          "metrics": {
+            "max_abs_disp_error": 4.770964644185138e-9,
+            "max_pos_energy_increase": 0,
+            "nfev": 299
+          }
+        },
+        {
+          "case": 6,
+          "repeat": 1,
+          "seed": 20260912,
+          "parameters": {
+            "zeta": 1.5,
+            "solver": "Radau"
+          },
+          "status": "passed",
+          "executionRecordId": "56f3aecd-9276-48e0-8a8e-7419ef254ccb",
+          "artifacts": [
+            {
+              "id": "f5b4b054-d034-4755-8197-800876506af0",
+              "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+              "name": "study-metrics.json",
+              "mime": "application/json",
+              "size": 92,
+              "sha256": "cf3800f37961b6be5346c3d52a3ffa11ef9e4271d786f168de8a16011a4a09de",
+              "createdAt": 1789230051711,
+              "provenance": "Execution 81e5c4b3-2af6-4b6a-9103-ccabf25c62e5; exit 0; python"
+            }
+          ],
+          "metrics": {
+            "max_abs_disp_error": 2.8788859629536034e-9,
+            "max_pos_energy_increase": 0,
+            "nfev": 1085
+          }
+        },
+        {
+          "case": 7,
+          "repeat": 1,
+          "seed": 20260912,
+          "parameters": {
+            "zeta": 3,
+            "solver": "DOP853"
+          },
+          "status": "passed",
+          "executionRecordId": "4289f84e-c885-41d3-bca1-6688fc4a75d0",
+          "artifacts": [
+            {
+              "id": "2e6184ec-cc91-4bb0-b618-7fd3b622a02c",
+              "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+              "name": "study-metrics.json",
+              "mime": "application/json",
+              "size": 91,
+              "sha256": "3765187614ef352699e9ee01f84e944c31a1db036e16f04bb97180f9ecfe796f",
+              "createdAt": 1789230052670,
+              "provenance": "Execution a692c5de-226c-47fc-98a1-093b00d224ed; exit 0; python"
+            }
+          ],
+          "metrics": {
+            "max_abs_disp_error": 1.3809750565307866e-8,
+            "max_pos_energy_increase": 0,
+            "nfev": 437
+          }
+        },
+        {
+          "case": 8,
+          "repeat": 1,
+          "seed": 20260912,
+          "parameters": {
+            "zeta": 3,
+            "solver": "Radau"
+          },
+          "status": "passed",
+          "executionRecordId": "0276fb3d-326e-42be-b8a6-d20366afedfa",
+          "artifacts": [
+            {
+              "id": "92358e21-ea6e-4190-b497-e4355ded0a1f",
+              "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+              "name": "study-metrics.json",
+              "mime": "application/json",
+              "size": 90,
+              "sha256": "d6e039e1a32821b0d1e424bc94ef2932971b71e9da5c11b9e244caddb6fd18f6",
+              "createdAt": 1789230052685,
+              "provenance": "Execution 20211ab7-b60c-4439-bc28-098a354184f1; exit 0; python"
+            }
+          ],
+          "metrics": {
+            "max_abs_disp_error": 1.073340294421854e-8,
+            "max_pos_energy_increase": 0,
+            "nfev": 792
+          }
+        }
+      ],
+      "scope": "Declared computational checks only. Inspect controls, design, implementation and scientific interpretation independently."
+    }
+  ],
+  "runs": [
+    {
+      "id": "595141e8-f365-418f-86eb-b9ba567dbe8b",
+      "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+      "status": "completed",
+      "inputTokens": 254018,
+      "outputTokens": 10489,
+      "settings": {
+        "provider": "openai",
+        "model": "gpt-5-mini",
+        "limits": {
+          "maxAgents": 2,
+          "concurrency": 2,
+          "maxSteps": 16,
+          "maxOutputTokens": 8192,
+          "tokenBudget": 400000
+        }
+      },
+      "createdAt": 1789229467558,
+      "error": null
+    },
+    {
+      "id": "ad62782f-c727-4d2f-97fa-31c09f715078",
+      "researchId": "6a628b91-737b-43ab-ae7d-080992109b5f",
+      "status": "completed",
+      "inputTokens": 89803,
+      "outputTokens": 9978,
+      "settings": {
+        "provider": "openai",
+        "model": "gpt-5-mini",
+        "limits": {
+          "maxAgents": 2,
+          "concurrency": 2,
+          "maxSteps": 12,
+          "maxOutputTokens": 8192,
+          "tokenBudget": 400000
+        }
+      },
+      "createdAt": 1789229990990,
+      "error": null
+    }
+  ]
+}
